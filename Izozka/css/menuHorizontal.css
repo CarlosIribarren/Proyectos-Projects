@@ -1,0 +1,96 @@
+/* ---------------------------------------------------------------------------------------------------------------------------*/
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que INFERIOR el valor definido en la consulta.*/
+@media screen and (max-width: 2500px) {
+nav{
+	background-color:#0080FF;
+	overflow:hidden;
+	padding:5px;
+	width:100%-5px;
+}
+nav ul{
+	list-style:none;
+	margin:0 10px 0 10px;
+	padding:0;
+	margin-left:200px;
+}
+/* Cuando estamos en la pestaña elegida, esta se seleciona
+con un color para resaltarla*/
+a.current  {
+    background-color: #0040FF;
+    color: #FFFFFF;
+		/*Bordes redondeados*/
+	-webkit-border-radius:5px;/*Chrome y Safari*/
+	-moz-border-radius:5px;/*Firefox*/
+	-o-border-radius:5px;/*Opera*/
+	border-radius:5px;/*Estandar por defecto*/
+}
+
+nav ul li{
+	/*Bordes redondeados*/
+	-webkit-border-radius:5px;/*Chrome y Safari*/
+	-moz-border-radius:5px;/*Firefox*/
+	-o-border-radius:5px;/*Opera*/
+	border-radius:5px;/*Estandar por defecto*/
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	margin-right:10px;
+	text-align:center;
+	
+}
+nav ul li:hover{
+	/*Degradado de fondo*/
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#0040FF), to( #0040FF));/*Chrome y Safari*/
+	background-image: -moz-linear-gradient(top center, #0040FF, #0040FF);/*Firefox*/
+	background-image: -o-linear-gradient(top, #0040FF, #0040FF);/*Opera*/
+	background-image: linear-gradient(top, #0040FF, #0040FF);/*Estandar por defecto*/
+
+}
+nav ul li a{
+	color:#FFFFFF;
+	display:block;
+	padding:10px;
+	text-decoration:none;
+
+}
+nav ul li a:hover {
+	color: #FFFFFF;
+}
+
+
+
+}
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 1200px) {
+	
+	nav{
+		/* centrar el menu, dejando padding a la izquierda */
+		padding-left: 4em;
+	}
+
+	/* Reducir la letra del menu*/
+	nav ul li{
+		font-size:0.8em;
+	
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 860px) {
+	
+	nav{
+		/* centrar el menu, dejando padding a la izquierda */
+		padding-left: 0;
+	}
+
+	nav ul li{
+		/* letra mas pequeña */
+		font-size:0.6em;
+		/* letra del menu con menos separacion */
+		margin-right:0;
+	}
+
+}
+

@@ -1,0 +1,202 @@
+/* ---------------------------------------------------------------------------------------------------------------------------*/
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que INFERIOR el valor definido en la consulta.*/
+@media screen and (max-width: 2500px) {
+
+
+	/*
+	h1, #container, #container input, #container label, #container input:hover + label, #container input:checked + label, #content, #content div, #content p{
+		margin: 0;
+		padding: 0;	
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	}
+	*/
+	h1 {
+	 margin: 1em 0;
+	 text-align: left;
+	}
+	#container {
+		margin: 0 auto;
+		/* Ancho del contenedor */
+		width: 97%; 
+		/* alinean a la derecha en container */
+		margin-left:1px;
+	}
+	#container input {
+	 height: 2.5em;
+	 visibility: hidden;
+	}
+	#container label {
+	 background: #f9f9f9; /* Fondo de las pestañas */
+	 border-radius: .25em .25em 0 0;
+	 color: #888; /* Color del texto de las pestañas */
+	 cursor: pointer;
+	 display: block;
+	 float: left;
+	 font-size: 1em; /* Tamaño del texto de las pestañas */
+	 height: 2.5em;
+	 line-height: 2.5em;
+	 margin-right: .25em;
+	 padding: 0 1.1em;
+	 text-align: center;
+	}
+	#container input:hover + label {
+	 background: #ddd; /* Fondo de las pestañas al pasar el cursor por encima */
+	 color: #666; /* Color del texto de las pestañas al pasar el cursor por encima */
+	}
+	#container input:checked + label {
+	 background: #f1f1f1; /* Fondo de las pestañas al presionar */
+	 color: #444; /* Color de las pestañas al presionar */
+	 position: relative;
+	 z-index: 6;
+	}
+	/* Contenido Entero */
+	#content {
+	 background: #f1f1f1; /* Fondo del contenido */
+	 border-radius: 0 .25em .25em .25em;
+	 min-height: 23em; /* Alto del contenido */
+	 position: relative;
+	 width: 100%;
+	 z-index: 5;
+		margin-bottom:10px;
+
+	}
+	#content div {
+	 opacity: 0;
+	 padding: 1.5em;
+	 position: absolute;
+	 z-index: -100;
+	}
+
+
+	/* estilo de los contenidos */
+	.contenidos{
+		/* Ancho */
+		width: 90%; 
+	}
+	/* estilo de los productos */
+	article.producto{
+		/* redondear bordes */	
+		-khtml-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		border: 1px solid #cccccc;
+		/* Color del articulo */
+		background-color:#dddddd;	
+		/* anchura del producto */
+		width:45%;
+		/* separar articulos */
+		margin:1.2%;
+		float:left;
+	}
+	/* imagen del producto */
+	.producto img{
+		/* flotar a la izquierda */
+		float:left;
+		/*anchura*/
+		width: 75px;
+		/*altura*/
+		height:75px;
+
+	}
+	/* titulo producto */
+	spam.tituloProducto{
+		/* flotar a la izquierda */
+		float:left;
+		padding:2%;
+		font-size:1.1em;
+		font-weight:bold;
+		/* ancho del titulo */
+		width:70%;
+	}
+
+
+	/* ----- fin estilo contenidos  -------- */
+
+	#container input#tab-1:checked ~ #content #content-1,
+	#container input#tab-2:checked ~ #content #content-2,
+	#container input#tab-3:checked ~ #content #content-3,
+	#container input#tab-4:checked ~ #content #content-4,
+	#container input#tab-5:checked ~ #content #content-5,
+	#container input#tab-6:checked ~ #content #content-6,
+	#container input#tab-7:checked ~ #content #content-7{
+	 opacity: 1;
+	 z-index: 100;
+	}
+
+}
+
+
+	
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 1300px) {
+	
+	/* titulo producto */
+	spam.tituloProducto{
+		padding:2%;
+		font-size:0.9em;
+		/* ancho del titulo */
+		width:50%;
+		/* flotar a la izquierda */
+		float:left;
+	}
+
+	
+	/* estilo de los productos */
+	article.producto{
+		/* anchura del producto */
+		width:30%;
+		/* separar articulos */
+		margin:1.2%;
+	}
+	
+	
+	#container label {
+
+		 font-size: 0.9em; /* Tamaño del texto de las pestañas */
+		 height: 2.5em;
+		 line-height: 2.5em;
+		 margin-right: .25em;
+		 padding: 0 0.6em;
+
+	}
+	#container{
+		width:97%;
+	}
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 860px) {
+		/* titulo producto */
+	spam.tituloProducto{
+		padding:2%;
+		font-size:0.6em;
+		/* ancho del titulo */
+		width:50%;
+		/* flotar a la izquierda */
+		float:left;
+	}
+
+	
+	/* estilo de los productos */
+	article.producto{
+		/* anchura del producto */
+		width:30%;
+		/* separar articulos */
+		margin:1.2%;
+	}
+	
+	
+	#container label {
+
+		 font-size: 0.8em; /* Tamaño del texto de las pestañas */
+		 height: 2.5em;
+		 line-height: 2.5em;
+		 margin-right: .25em;
+		 padding: 0 0.5em;
+
+	}
+
+}

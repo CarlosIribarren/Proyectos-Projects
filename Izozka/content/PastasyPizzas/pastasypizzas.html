@@ -1,7 +1,44 @@
-<div id="titulo_categoria">
-	
-	<img src="images/pastasypizzas.jpeg"  alt="Pastas y pizzas">	
-	<h2>Pastas &amp; Pizzas</h2>
-	
-</div>
-
+	<!--Título-->
+	<h1>Pastas y Pizzas : </h1>
+	<!--Contenedor-->
+	<div id="container">
+		<!--Pestaña 1 activa por defecto-->
+		<input id="tab-1" type="radio" name="tab-group" checked="checked" />
+		<label for="tab-1">Pizzas</label>
+		<!--Pestaña 2 inactiva por defecto-->
+		<input id="tab-2" type="radio" name="tab-group" /> 
+		<label for="tab-2">Pastas</label>
+		<!--Contenido a mostrar/ocultar-->
+		<div id="content">
+			<!--Contenido de la Pestaña 1 : Pizzas -->
+			<div class="contenidos" id="content-1">
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Pizza-Jamon-Queso.jpg" alt="Pizza Jamon y Queso"><spam class="tituloProducto">Pizza Jamon y Queso</spam></p>
+				</article>
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Pizza-4-Quesos.jpg" alt="Pizza 4 Quesos"><spam class="tituloProducto">Pizza 4 Quesos</spam></p>
+				</article>
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Pizza-Bologñesa.jpg" alt="Pizza Bologñesa"><spam class="tituloProducto">Pizza Bologñesa</spam></p>
+				</article>
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Pizza-Caprichosa.jpg" alt="Pizza Caprichosa"><spam class="tituloProducto">Pizza Caprichosa</spam></p>
+				</article>
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Pizza-Salami.jpg" alt="Pizza Salami"><spam class="tituloProducto">Pizza Salami</spam></p>
+				</article>
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Pizza-Altorno.jpg" alt="Pizza Altorno"><spam class="tituloProducto">Pizza Altorno</spam></p>
+				</article>
+			</div>
+			<!--Contenido de la Pestaña 2 : Pastas -->
+			<div class="contenidos" id="content-2">
+				<article class = "producto">
+					<p><img src="../images/pastasYpizaas/Lasana.jpg" alt="Lasaña"><spam class="tituloProducto" >Lasaña</spam></p>
+				</article>
+				<article class = "producto"> 
+					<p><img src="../images/pastasYpizaas/Canelones.jpg" alt="Canelones"><spam  class="tituloProducto" >Canelones</spam></p>
+				</article>
+			</div>
+		</div>
+	</div>

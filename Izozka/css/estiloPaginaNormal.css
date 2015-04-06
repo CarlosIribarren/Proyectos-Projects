@@ -1,0 +1,54 @@
+/* ---------------------------------------------------------------------------------------------------------------------------*/
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que INFERIOR el valor definido en la consulta.*/
+@media screen and (max-width: 2500px) {
+
+
+	#cajaPrincipal{
+		/* tamaño ancho */
+		width:60%;
+		/* margen de abajo para bajar el banner */
+		margin-bottom:5em;
+		/* margen izq */
+		margin-left:20%;
+		/* margen der */
+		margin-right:20%;
+		/* tamaño de texto */
+		font-size:1em;
+		/* margen arriba */
+		margin-top:2%;
+		
+	}
+	
+	#cajaPrincipal h2{
+			/* margen arriba para separar titulos */
+			margin-top:2%;
+		}
+	
+	#cajaInformacion p{
+		/* separacion entre parrafos */
+		margin-top:1em;
+	}
+	
+	
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 1200px) {
+	
+		#cajaPrincipal{
+			/* tamaño de texto */
+			font-size:0.9em;
+	}
+	
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 860px) {
+	
+		#cajaPrincipal{
+		/* tamaño de texto */
+		font-size:0.7em;
+	}
+}

@@ -1,0 +1,128 @@
+/* ---------------------------------------------------------------------------------------------------------------------------*/
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que INFERIOR el valor definido en la consulta.*/
+@media screen and (max-width: 2500px) {
+
+
+	/* PRINCIPAL */
+	#cajaPrincipal{
+
+		/* tamaño ancho */
+		width:80%;
+		/* margen arriba (separar del menu horizontal) */
+		margin-top:2%;
+		/* margen derecho */
+		margin-right:10%;
+		/* margen izquierda */
+		margin-left:10%;
+	}
+	
+	/* div para envolver todo el texto+enlaces de la pantalla principal */
+	#textoPantallaPrincipal{
+		/* flotar a la izquierda */
+		float:left;	
+		/* padding izq */
+		padding-left:2em;
+		/* padding der */
+		padding-right:2em;
+		/* tamaño ancho */
+		width:50%;
+		/* margen con el slider */
+		margin-left:5px;
+
+	}
+	
+	/* texto de la pantalla principal */
+	#textoPantallaPrincipal p{
+		/* separa el enlace */
+		margin-bottom:2em;
+		/* separar el parrafo */
+		margin-top:2em;
+	}
+
+
+	/* Enlace Ver Productos */
+	#textoPantallaPrincipal a{
+		/* Quitar el subrayado del enlace */
+		text-decoration:none; 
+		/* redondear bordes */	
+		-khtml-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		border: 1px solid #cccccc;
+		/* color de fondo */
+		background-color: #dddddd;
+		/* padding */
+		padding:1em;	
+
+		/* color letra */
+		color:black;
+		/* letra negrita */
+		font-weight: bold;
+		/* centrar texto */
+		text-align:center;
+
+		/* centrar en enlace */
+		margin-left:40%;
+		margin-right:auto;
+
+		
+	}
+	
+	#icono-Catalogo{
+		width:7%;
+		position:relative;
+		margin-bottom:-0.5em;
+	}
+
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 1200px) {
+	
+	/* texto de la pantalla principal */
+	#textoPantallaPrincipal p{
+		/* reducir letra */
+		font-size:0.9em;
+		/* Reducir espacio parrafos */
+		margin-bottom:1em;
+	}
+	
+	/* PRINCIPAL */
+	#cajaPrincipal{
+		/* margen arriba */
+		margin-top:1%;
+	}
+	
+	/* Enlace Ver Productos */
+	#textoPantallaPrincipal a{
+		font-size: 0.9em;
+	}
+	
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 860px) {
+	
+	/* texto de la pantalla principal */
+	#textoPantallaPrincipal p{
+		/* reducir letra */
+		font-size:0.7em;
+		/* Reducir espacio parrafos */
+		margin-bottom:0.5em;
+	}
+	
+	/* Enlace Ver Productos */
+	#textoPantallaPrincipal a{
+		/* reducir letra enlace */
+		font-size: 0.7em;
+		
+		/* centrar en enlace */
+		margin-left:20%;
+		margin-right:auto;
+	}
+	
+	
+}

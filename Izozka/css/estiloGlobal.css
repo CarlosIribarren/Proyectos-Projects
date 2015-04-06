@@ -1,0 +1,107 @@
+/* ---------------------------------------------------------------------------------------------------------------------------*/
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que INFERIOR el valor definido en la consulta.*/
+@media screen and (max-width: 2500px) {
+
+	*{
+		margin:0;
+		padding:0;
+	}
+
+	/* BANER */
+	#cajaBaner{
+		/* texto alineado a la derecha */
+		text-align:right;
+		/* separacion de 1em a la derecha */
+		padding-right:1em;
+		/* Tamaño letra */
+		font-size:1em;
+		/* linea horizontal */
+		border-bottom: 1px solid #ccc;
+		/* color de fondo */
+		background-color:#F2F2F2;
+	}
+	/* MARCA */
+	#cajaMarca{
+		/* Centrado de la marca = Logo + Titulo */
+		text-align:center;
+	}
+	/* MENU VERTICAL */
+	#cajaMenuVertical{
+		/* flotar a la izquierda */
+		float:left;
+		/* ancho compartido con la caja principal ( 20 + 80 ) */
+		width:20%;
+		
+		
+	}
+	/* PRINCIPAL */
+	#cajaPrincipal{
+		/* flotar a la izquierda */
+		float:left;
+		/* ancho compartido con el Menu Vertical ( 20 + 80 ) */
+		width:80%;
+		
+	}
+	.separador{
+		width:100%;
+		height:7em;
+		/* para empujar el resto del contenido hacia abajo */
+		clear:both;
+	}
+	
+	/* PIE DE PAGINA */
+	#cajaPie{
+		/* Posicionar el texto en el medio */
+		text-align:center;
+		/* para empujar el resto del contenido hacia abajo */
+		clear:both;
+		/* linea horizontal */
+		border-top: 1px solid #ccc;
+		/* color de fondo */
+		background-color:#F2F2F2;
+	}
+}
+	
+	
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 1200px) {
+	
+	#img_Logo{
+		width:20%;
+	}
+	#img_Titulo{
+		width:50%;
+	}
+	/* baner letra pequeña */
+	#cajaBaner p{
+		font-size:0.9em;
+	}
+	.separador{
+		/*reducir la altura */
+		height:4em;
+	}
+	
+	#cajaPie{
+		font-size:0.9em;
+	}
+}
+
+
+/* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
+@media screen and (max-width: 860px) {
+	
+	#img_Logo{
+		width:20%;
+	}
+	#img_Titulo{
+		width:50%;
+	}
+	/* baner letra pequeña */
+	#cajaBaner p{
+		font-size:0.7em;
+	}
+	/* Pie letra pequeña */
+	#cajaPie{
+		font-size:0.7em;
+	}
+}
