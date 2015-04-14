@@ -1,0 +1,11 @@
+NOTA : hay que cambiar la ruta de la Base de datos en la Clase KontuDatuBasea.java .
+
+Base de datos :
+
+Usuario1:
+	usuario : 1234
+	pass : 1234
+	
+Usuario2:
+	usuario : 12
+	pass : 12
