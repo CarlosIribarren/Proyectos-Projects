@@ -1,0 +1,8 @@
+NOTA : hay que cambiar la ruta de la Base de datos en la Clase KontuDatuBasea.java .
+
+Base de datos :
+
+Usuario1:
+	KontuZenbakia ( numero de cuenta ) : 100
+	PinZenbakia ( numero de pin ) : 111
+	
