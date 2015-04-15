@@ -1,6 +1,6 @@
-# Proyectos-Projects
-# Proyectos de programación - Programming projects
-
+<h3>Proyectos-Projects</h3>
+<p>Proyectos de programación - Programming projects </p>
+<hr>
 Izozka : HTML5 + CSS3 + JS.
 
 Abestik : Socket programming in C language. 
