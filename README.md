@@ -7,5 +7,5 @@ Abestik : Socket programming in C language.
 
 Java :
   - Ambulatorio : PrimeFaces + JSF + Hibernate.
-  - Cajero : JavaSE + SQLite.
-  - Jokoa : JSP + SQLite.
+  - Cajero : JavaSE + JDBC(SQLite).
+  - Jokoa : JSP + JDBC(SQLite).
