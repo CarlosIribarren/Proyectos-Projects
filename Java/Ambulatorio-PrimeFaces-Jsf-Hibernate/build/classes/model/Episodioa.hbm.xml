@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Episodioa" table="episodioa" catalog="anbulategia">
+        <id name="episodiozenbakia" type="java.lang.Integer">
+            <column name="episodiozenbakia" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="gaixoa" class="model.Gaixoa" fetch="select">
+            <column name="gaixozenbakia" not-null="true" />
+        </many-to-one>
+        <many-to-one name="kontsulta" class="model.Kontsulta" fetch="select">
+            <column name="kontsultazenbakia" not-null="true" />
+        </many-to-one>
+        <property name="deskribapena" type="string">
+            <column name="deskribapena" length="200" not-null="true" />
+        </property>
+        <property name="larritasuna" type="string">
+            <column name="larritasuna" length="200" not-null="true" />
+        </property>
+        <set name="tratamenduas" inverse="true">
+            <key>
+                <column name="episodiozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Tratamendua" />
+        </set>
+        <set name="errezetas" inverse="true">
+            <key>
+                <column name="episodiozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Errezeta" />
+        </set>
+        <set name="frogas" inverse="true">
+            <key>
+                <column name="episodiozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Froga" />
+        </set>
+    </class>
+</hibernate-mapping>

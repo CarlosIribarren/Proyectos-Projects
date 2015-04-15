@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Gaixoa" table="gaixoa" catalog="anbulategia">
+        <id name="gaixozenbakia" type="java.lang.Integer">
+            <column name="gaixozenbakia" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="sendagilea" class="model.Sendagilea" fetch="select">
+            <column name="sendagilenagusia" not-null="true" />
+        </many-to-one>
+        <property name="dni" type="string">
+            <column name="dni" length="20" />
+        </property>
+        <property name="izena" type="string">
+            <column name="izena" length="100" />
+        </property>
+        <property name="abizena" type="string">
+            <column name="abizena" length="200" />
+        </property>
+        <property name="helbidea" type="string">
+            <column name="helbidea" length="200" />
+        </property>
+        <property name="tlf" type="string">
+            <column name="tlf" length="50" />
+        </property>
+        <property name="jaiotzedata" type="date">
+            <column name="jaiotzedata" length="10" />
+        </property>
+        <set name="episodioas" inverse="true">
+            <key>
+                <column name="gaixozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Episodioa" />
+        </set>
+        <set name="citaSendagiles" inverse="true">
+            <key>
+                <column name="gaixozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.CitaSendagile" />
+        </set>
+        <set name="kontsultas" inverse="true">
+            <key>
+                <column name="gaixozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Kontsulta" />
+        </set>
+        <set name="frogas" inverse="true">
+            <key>
+                <column name="gaixozenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Froga" />
+        </set>
+    </class>
+</hibernate-mapping>

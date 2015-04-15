@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/bluesky-1.0.9.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/primefaces-3.4.2.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/asm.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/asm-attrs.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/cglib-2.1.3.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/commons-collections-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/ehcache-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/hibernate3.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/hibernate-entitymanager.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/hibernate-tools.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/javassist.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/jdbc2_0-stdext.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/jta.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/hibernate-support/org-apache-commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/javaee-endorsed-api-6.0/javax.annotation.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/javaee-endorsed-api-6.0/jaxb-api-osgi.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/Ambulatorio-PrimeFaces-Jsf-Hibernate/LIBRERIAS/javaee-endorsed-api-6.0/webservices-api-osgi.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 8.x Runtime">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-openjdk-amd64">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF 1.2 (Apache Myfaces JSF Core-1.2 API 1.2.9)">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+			<attribute name="owner.project.facets" value="jst.jsf"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

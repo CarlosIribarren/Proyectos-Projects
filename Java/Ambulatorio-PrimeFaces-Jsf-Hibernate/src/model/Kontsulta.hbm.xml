@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Kontsulta" table="kontsulta" catalog="anbulategia">
+        <id name="kontsultazenbakia" type="java.lang.Integer">
+            <column name="kontsultazenbakia" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="gaixoa" class="model.Gaixoa" fetch="select">
+            <column name="gaixozenbakia" not-null="true" />
+        </many-to-one>
+        <many-to-one name="sendagilea" class="model.Sendagilea" fetch="select">
+            <column name="sendagilezenbakia" not-null="true" />
+        </many-to-one>
+        <property name="data" type="date">
+            <column name="data" length="10" not-null="true" />
+        </property>
+        <property name="hasiera" type="time">
+            <column name="hasiera" length="8" not-null="true" />
+        </property>
+        <property name="gela" type="string">
+            <column name="gela" length="100" not-null="true" />
+        </property>
+        <set name="episodioas" inverse="true">
+            <key>
+                <column name="kontsultazenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Episodioa" />
+        </set>
+    </class>
+</hibernate-mapping>

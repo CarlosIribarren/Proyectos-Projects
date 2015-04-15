@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Anbulategia</title>
+        <link rel="stylesheet" href="Gehigarriak/css/style.css" />
+        <style type="text/css">
+            html{
+                height: 100%;
+            }
+            body{
+                height: 80%;
+            }
+        </style>    
+    </h:head>
+    
+    <h:body>
+        <h:form id="frmMenu">  
+            <p:menubar autoDisplay="false">  
+                <p:menuitem value="Hasiera" url="Orokorra.jsf" icon="etxea" style="margin-left: 10px" /> 
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.gaixoa}" label="Gaixoa" icon="pertsona">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaixoberria}" value="Gaixo Berria" url="GaixoBerria.jsf" icon="berria" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.bilatuhistorial}" value="Bilatu Historial" url="BilatuGaixoHistorial.jsf" icon="bilatu" />  
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.cita}" label="Cita" icon="cita">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkoproba}" value="Gaurko Probak" url="GaurkoProbak.jsf" icon="probak" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkokontsulta}" value="Gaurko Kontsultak" url="GaurkoKontsulta.jsf" icon="kontsulta" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.emancita}" value="Eman Cita" url="EmanCita.jsf" icon="emancita" /> 
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.ordutegia}" label="Ordutegia" icon="egutegia">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiajarri}" value="Ordutegia jarri" url="OrdutegiaJarri.jsf" icon="ordujarri" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiakontsultatu}" value="Ordutegia kontsultatu" url="OrdutegiaKontsultatu.jsf" icon="ordutegiakontsultatu" />  
+                </p:submenu>  
+                <p:menuitem value="Atera" url="index.jsf" icon="atera" /> 
+                <p:menuitem value=" &emsp; - &emsp; #{loginBean.erabiltzailea.perfil.deskribapena}&emsp;:" disabled="true"  />
+                <p:menuitem value="#{loginBean.erabiltzailea.izena}" disabled="true"  />
+            </p:menubar>       
+        </h:form>  
+        
+        <h:panelGrid columns="2" cellpadding="20" style="margin:auto"> 
+        
+         <h:form id="episodioak" > 
+            <p:dataTable id ="episodiotaulaa" var="episodio" value="#{historialBean.episodio_lista_taula}"> 
+                
+                <f:facet name="header">  
+                     Episodioak
+                </f:facet> 
+                
+                <p:column headerText="Deskribapena" >  
+                    <h:outputText value="#{episodio.deskribapena}" />  
+                </p:column>  
+                <p:column headerText="Data" >  
+                    <h:outputText value="#{episodio.kontsulta.data}" />  
+                </p:column>  
+                <p:column headerText="Larritasuna" >  
+                    <h:outputText value="#{episodio.larritasuna}" />  
+                </p:column> 
+                <p:column headerText="Ikusi" >  
+                    <p:commandButton value="Aztertu" icon="probak" update=":froga:frogataula"  
+                                     oncomplete="#{historialBean.prestatuEpisodio(episodio.episodiozenbakia)}"/>       
+                </p:column>   
+            </p:dataTable>    
+        </h:form>  
+        
+        
+        <h:form id="froga"  >  
+            <p:dataTable id ="frogataula" var="froga" value="#{historialBean.froga_taula}" style=" text-align: center;width: 500px"> 
+                
+                <f:facet name="header">  
+                     Frogak
+                </f:facet> 
+                
+                <p:column headerText="Deskribapena" >  
+                    <h:outputText value="#{froga.deskribapena}" />  
+                </p:column>  
+                <p:column headerText="Data" >  
+                    <h:outputText value="#{froga.frogadata}" />  
+                </p:column>  
+                <p:column headerText="Emaitza" >  
+                    <h:outputText value="#{froga.emaitza}" />  
+                </p:column> 
+            </p:dataTable>  
+        </h:form>  
+
+        
+        
+        <h:form id="tratamendua"  > 
+            <p:dataTable id ="tratamenduataula" var="episodio" value="#{historialBean.episodio_lista_taula}" style=" text-align: center;width: 500px"> 
+                
+                <f:facet name="header">  
+                    Frogak Airean
+                </f:facet> 
+                
+                <p:column headerText="Episodioa" >  
+                    <h:outputText value="#{episodio.deskribapena}" />  
+                </p:column>  
+                <p:column headerText="Data" >  
+                    <h:outputText value="#{episodio.kontsulta.data}" />  
+                </p:column>  
+                <p:column headerText="Larritasuna" >  
+                    <h:outputText value="#{episodio.larritasuna}" />  
+                </p:column> 
+            </p:dataTable>   
+        </h:form> 
+        
+        
+        
+        <h:form id="FrogakAirean"  > 
+            <p:dataTable id ="frogaktaulaAirean" var="episodio" value="#{historialBean.episodio_lista_taula}" style=" text-align: center;width: 500px"> 
+                
+                <f:facet name="header">  
+                     Tratamendua
+                </f:facet> 
+                
+                <p:column headerText="Episodioa" >  
+                    <h:outputText value="#{episodio.deskribapena}" />  
+                </p:column>  
+                <p:column headerText="Data" >  
+                    <h:outputText value="#{episodio.kontsulta.data}" />  
+                </p:column>  
+                <p:column headerText="Larritasuna" >  
+                    <h:outputText value="#{episodio.larritasuna}" />  
+                </p:column> 
+            </p:dataTable>   
+        </h:form>  
+            
+          <br/>  
+            
+            
+        <h:form id="errezeta"  > 
+            <p:dataTable id ="errezetataula" var="episodio" value="#{historialBean.episodio_lista_taula}" style=" text-align: center;width: 500px"> 
+                
+                <f:facet name="header">  
+                     Errezetak
+                </f:facet> 
+                
+                <p:column headerText="Episodioa" >  
+                    <h:outputText value="#{episodio.deskribapena}" />  
+                </p:column>  
+                <p:column headerText="Data" >  
+                    <h:outputText value="#{episodio.kontsulta.data}" />  
+                </p:column>  
+                <p:column headerText="Larritasuna" >  
+                    <h:outputText value="#{episodio.larritasuna}" />  
+                </p:column> 
+            </p:dataTable>  
+            <br/>
+            <p:commandButton value="Atzera" style="float: right" action="GaurkoKontsulta.xhtml" icon="cita" />
+        </h:form>  
+          
+          
+            
+      </h:panelGrid>
+    </h:body>
+</html>
+

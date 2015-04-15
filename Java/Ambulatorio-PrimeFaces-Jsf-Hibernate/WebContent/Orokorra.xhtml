@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Anbulategia</title>
+        <link rel="stylesheet" href="Gehigarriak/css/style.css" />
+        <style type="text/css">
+            html{
+                height: 100%;
+            }
+            body{
+                height: 80%;
+            }
+        </style>    
+    </h:head>
+    
+    <h:body>
+        <h:form id="frmMenu">  
+            <p:menubar autoDisplay="false">  
+                <p:menuitem value="Hasiera" url="Orokorra.jsf" icon="etxea" style="margin-left: 10px" /> 
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.gaixoa}" label="Gaixoa" icon="pertsona">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaixoberria}" value="Gaixo Berria" url="GaixoBerria.jsf" icon="berria" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.bilatuhistorial}" value="Bilatu Historial" url="BilatuGaixoHistorial.jsf" icon="bilatu" />  
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.cita}" label="Cita" icon="cita">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkoproba}" value="Gaurko Probak" url="GaurkoProbak.jsf" icon="probak" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkokontsulta}" value="Gaurko Kontsultak" url="GaurkoKontsulta.jsf" icon="kontsulta" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.emancita}" value="Eman Cita" url="EmanCita.jsf" icon="emancita" /> 
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.ordutegia}" label="Ordutegia" icon="egutegia">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiajarri}" value="Ordutegia jarri" url="OrdutegiaJarri.jsf" icon="ordujarri" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiakontsultatu}" value="Ordutegia kontsultatu" url="OrdutegiaKontsultatu.jsf" icon="ordutegiakontsultatu" />  
+                </p:submenu>  
+                <p:menuitem value="Atera" url="index.jsf" icon="atera" /> 
+                <p:menuitem value=" &emsp; - &emsp; #{loginBean.erabiltzailea.perfil.deskribapena}&emsp;:" disabled="true"  />
+                <p:menuitem value="#{loginBean.erabiltzailea.izena}" disabled="true"  />
+            </p:menubar>
+             
+        </h:form>     
+    </h:body>
+</html>
+

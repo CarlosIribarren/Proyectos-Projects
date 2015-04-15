@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Erizaina" table="erizaina" catalog="anbulategia">
+        <id name="erizainzenbakia" type="java.lang.Integer">
+            <column name="erizainzenbakia" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="perfil" class="model.Perfil" fetch="select">
+            <column name="perfilzenbakia" not-null="true" />
+        </many-to-one>
+        <property name="dni" type="string">
+            <column name="dni" length="20" not-null="true" />
+        </property>
+        <property name="izena" type="string">
+            <column name="izena" length="100" not-null="true" />
+        </property>
+        <property name="abizena" type="string">
+            <column name="abizena" length="200" not-null="true" />
+        </property>
+        <property name="helbidea" type="string">
+            <column name="helbidea" length="200" not-null="true" />
+        </property>
+        <property name="tlf" type="string">
+            <column name="tlf" length="50" not-null="true" />
+        </property>
+        <property name="jaiotzedata" type="date">
+            <column name="jaiotzedata" length="10" not-null="true" />
+        </property>
+        <property name="user" type="string">
+            <column name="user" length="100" not-null="true" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="100" not-null="true" />
+        </property>
+        <set name="lanOrduakErizainas" inverse="true">
+            <key>
+                <column name="erizainzenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.LanOrduakErizaina" />
+        </set>
+        <set name="frogas" inverse="true">
+            <key>
+                <column name="erizainzenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Froga" />
+        </set>
+    </class>
+</hibernate-mapping>

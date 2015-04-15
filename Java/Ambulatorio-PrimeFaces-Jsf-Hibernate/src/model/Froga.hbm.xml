@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Froga" table="froga" catalog="anbulategia">
+        <id name="frogazenbakia" type="java.lang.Integer">
+            <column name="frogazenbakia" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="idazkaria" class="model.Idazkaria" fetch="select">
+            <column name="idazkarizenbakia" not-null="true" />
+        </many-to-one>
+        <many-to-one name="gaixoa" class="model.Gaixoa" fetch="select">
+            <column name="gaixozenbakia" not-null="true" />
+        </many-to-one>
+        <many-to-one name="erizaina" class="model.Erizaina" fetch="select">
+            <column name="erizainzenbakia" not-null="true" />
+        </many-to-one>
+        <many-to-one name="episodioa" class="model.Episodioa" fetch="select">
+            <column name="episodiozenbakia" not-null="true" />
+        </many-to-one>
+        <property name="gela" type="string">
+            <column name="gela" length="100" not-null="true" />
+        </property>
+        <property name="frogadata" type="date">
+            <column name="frogadata" length="10" not-null="true" />
+        </property>
+        <property name="frogaordua" type="time">
+            <column name="frogaordua" length="8" not-null="true" />
+        </property>
+        <property name="idazkariakegindakodata" type="timestamp">
+            <column name="idazkariakegindakodata" length="19" not-null="true" />
+        </property>
+        <property name="sendagileakegindakodata" type="timestamp">
+            <column name="sendagileakegindakodata" length="19" not-null="true" />
+        </property>
+        <property name="deskribapena" type="string">
+            <column name="deskribapena" length="200" not-null="true" />
+        </property>
+        <property name="emaitza" type="string">
+            <column name="emaitza" length="200" not-null="true" />
+        </property>
+        <property name="ikusia" type="boolean">
+            <column name="ikusia" not-null="true" />
+        </property>
+        <property name="eginda" type="boolean">
+            <column name="eginda" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

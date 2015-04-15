@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Anbulategia</title>
+        <link rel="stylesheet" href="Gehigarriak/css/style.css" />
+        <style type="text/css">
+            html{
+                height: 100%;
+            }
+            body{
+                height: 80%;
+            }
+        </style>    
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:menubar autoDisplay="false">  
+                <p:menuitem value="Hasiera" url="Orokorra.jsf" icon="etxea" style="margin-left: 10px" /> 
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.gaixoa}" label="Gaixoa" icon="pertsona">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaixoberria}" value="Gaixo Berria" url="GaixoBerria.jsf" icon="berria" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.bilatuhistorial}" value="Bilatu Historial" url="BilatuGaixoHistorial.jsf" icon="bilatu" />  
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.cita}" label="Cita" icon="cita">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkoproba}" value="Gaurko Probak" url="GaurkoProbak.jsf" icon="probak" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkokontsulta}" value="Gaurko Kontsultak" url="GaurkoKontsulta.jsf" icon="kontsulta" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.emancita}" value="Eman Cita" url="EmanCita.jsf" icon="emancita" /> 
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.ordutegia}" label="Ordutegia" icon="egutegia">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiajarri}" value="Ordutegia jarri" url="OrdutegiaJarri.jsf" icon="ordujarri" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiakontsultatu}" value="Ordutegia kontsultatu" url="OrdutegiaKontsultatu.jsf" icon="ordutegiakontsultatu" />  
+                </p:submenu>  
+                <p:menuitem value="Atera" url="index.jsf" icon="atera" /> 
+                <p:menuitem value=" &emsp; - &emsp; #{loginBean.erabiltzailea.perfil.deskribapena}&emsp;:" disabled="true"  />
+                <p:menuitem value="#{loginBean.erabiltzailea.izena}" disabled="true"  />
+            </p:menubar>  
+        </h:form>  
+        
+        <h:form>          
+            <br/>
+            <p:commandButton value="Gaixo Berria" icon="berria" update=":frmGaixoBerria"
+                             actionListener="#{gaixoBerriaBean.gaixoBerriaPrestatu(actionEvent)}" oncomplete="dlgBerria.show()" />
+        </h:form>
+        
+        <h:form id="frmGaixokudeatu"  >
+            <br/>
+            <p:dataTable id ="datatable" var="gaixoa" value="#{gaixoBerriaBean.gaixo_lista}" style=" text-align: center"
+                         paginator="true" rows="15"  
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 rowsPerPageTemplate="5,10,15"> 
+                
+                <f:facet name="header">  
+                    Gaixo Lista 
+                </f:facet> 
+                
+                <p:column headerText="Izena" filterBy="#{gaixoa.izena}"  >  
+                    <h:outputText value="#{gaixoa.izena}" />  
+                </p:column>  
+
+                <p:column headerText="Abizena" filterBy="#{gaixoa.abizena}">  
+                    <h:outputText value="#{gaixoa.abizena}" />  
+                </p:column>  
+
+                <p:column headerText="DNI" filterBy="#{gaixoa.dni}">  
+                    <h:outputText value="#{gaixoa.dni}" />  
+                </p:column>  
+
+                <p:column headerText="Helbidea">  
+                    <h:outputText value="#{gaixoa.helbidea}" />  
+                </p:column>  
+                <p:column headerText="Sendagile Nagusia">  
+                    <h:outputText value="#{gaixoa.sendagilea.izena}" />  
+                </p:column>  
+                <f:facet name="footer">  
+                    Guztira : #{(gaixoBerriaBean.gaixo_lista).size()}  
+                </f:facet>  
+            </p:dataTable>    
+        </h:form>
+        
+        
+        
+        <h:form id="frmGaixoBerria">
+  
+             <p:growl id="growl" showDetail="true" sticky="true" />  
+            
+            <p:dialog header="Gaixo Berria" widgetVar="dlgBerria" resizable="false" id="dlgBerria" modal="true">      
+
+                 
+
+                <h:panelGrid columns="2" id="berria" > 
+                    
+                   
+                     
+                    
+                    <h:outputLabel  for="izena" value="Izena: *" />  
+                    <p:inputText id="izena" value="#{gaixoBerriaBean.gaixoa.izena}"  label="izena" />  
+                    
+
+                    
+                    <h:outputLabel  for="abizena" value="Abizena: *" />  
+                    <p:inputText id="abizena" value="#{gaixoBerriaBean.gaixoa.abizena}" />  
+                    
+                    
+                      <h:outputLabel  for="dni" value="DNI:*" />  
+                      <p:inputText id="dni" value="#{gaixoBerriaBean.gaixoa.dni}"  />  
+                    
+                    
+                     <h:outputLabel  for="helbidea" value="Bezero helbidea:*" />  
+                     <p:inputText id="helbidea" value="#{gaixoBerriaBean.gaixoa.helbidea}"  />  
+                    
+                    
+                     <h:outputLabel  for="telefonoa" value="telefonoa :*" />  
+                     <p:inputText id="telefonoa" value="#{gaixoBerriaBean.gaixoa.tlf}"  />  
+                    
+      
+                      <h:outputText value="Sendagilea: " />  
+                      <p:selectOneMenu value="#{gaixoBerriaBean.sendagilezenbakia}" effect="fade"  > 
+                        <f:selectItem itemLabel="Aukeratu bat" itemValue="" />  
+                        <f:selectItems value="#{gaixoBerriaBean.lista}" var="sendagilea" itemLabel="#{sendagilea.izena}" itemValue="#{sendagilea.sendagilezenbakia}"/>  
+                    </p:selectOneMenu>  
+                      
+                       
+                       <h:outputText value="Jaiotze data: " />                       
+                       <p:calendar id="cal" value="#{gaixoBerriaBean.gaixoa.jaiotzedata}" navigator="true" display="inline" /> 
+                   
+                       
+                </h:panelGrid>                         
+                
+                
+                <br/>
+                <p:separator/>
+                 
+                <p:commandButton  value="Atzera" update=":frmGaixokudeatu:datatable, growl" oncomplete="dlgBerria.hide()"   style=" margin-left: 125px" icon="atzera"/>  
+                <p:commandButton  value="Gorde" actionListener="#{gaixoBerriaBean.gordeGaixoBerria(actionEvent)}" update=":frmGaixokudeatu" oncomplete="dlgBerria.hide()" icon="gorde"  />      
+
+            </p:dialog> 
+        </h:form>
+    </h:body>
+</html>
+

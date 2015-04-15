@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="anbulategia"/>
+  <table-filter match-name="froga"/>
+  <table-filter match-name="kontsulta"/>
+  <table-filter match-name="idazkaria"/>
+  <table-filter match-name="tratamendua"/>
+  <table-filter match-name="lan_orduak_sendagilea"/>
+  <table-filter match-name="perfil"/>
+  <table-filter match-name="lan_orduak_idazkaria"/>
+  <table-filter match-name="episodioa"/>
+  <table-filter match-name="lan_orduak_erizaina"/>
+  <table-filter match-name="erizaina"/>
+  <table-filter match-name="sendagilea"/>
+  <table-filter match-name="errezeta"/>
+  <table-filter match-name="cita_sendagile"/>
+  <table-filter match-name="gaixoa"/>
+</hibernate-reverse-engineering>

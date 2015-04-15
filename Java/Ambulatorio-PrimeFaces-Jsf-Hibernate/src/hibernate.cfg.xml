@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Ambulatorio</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">managed</property>
+    <mapping resource="model/Episodioa.hbm.xml"/>
+    <mapping resource="model/LanOrduakSendagilea.hbm.xml"/>
+    <mapping resource="model/LanOrduakErizaina.hbm.xml"/>
+    <mapping resource="model/Froga.hbm.xml"/>
+    <mapping resource="model/Erizaina.hbm.xml"/>
+    <mapping resource="model/Idazkaria.hbm.xml"/>
+    <mapping resource="model/Perfil.hbm.xml"/>
+    <mapping resource="model/CitaSendagile.hbm.xml"/>
+    <mapping resource="model/Sendagilea.hbm.xml"/>
+    <mapping resource="model/LanOrduakIdazkaria.hbm.xml"/>
+    <mapping resource="model/Kontsulta.hbm.xml"/>
+    <mapping resource="model/Gaixoa.hbm.xml"/>
+    <mapping resource="model/Tratamendua.hbm.xml"/>
+    <mapping resource="model/Errezeta.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

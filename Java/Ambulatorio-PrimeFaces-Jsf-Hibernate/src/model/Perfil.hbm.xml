@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.Perfil" table="perfil" catalog="anbulategia">
+        <id name="perfilzenbakia" type="java.lang.Integer">
+            <column name="perfilzenbakia" />
+            <generator class="identity" />
+        </id>
+        <property name="deskribapena" type="string">
+            <column name="deskribapena" length="200" not-null="true" />
+        </property>
+        <property name="gaixoa" type="boolean">
+            <column name="gaixoa" not-null="true" />
+        </property>
+        <property name="gaixoberria" type="boolean">
+            <column name="gaixoberria" not-null="true" />
+        </property>
+        <property name="bilatuhistorial" type="boolean">
+            <column name="bilatuhistorial" not-null="true" />
+        </property>
+        <property name="cita" type="boolean">
+            <column name="cita" not-null="true" />
+        </property>
+        <property name="gaurkoproba" type="boolean">
+            <column name="gaurkoproba" not-null="true" />
+        </property>
+        <property name="gaurkokontsulta" type="boolean">
+            <column name="gaurkokontsulta" not-null="true" />
+        </property>
+        <property name="emancita" type="boolean">
+            <column name="emancita" not-null="true" />
+        </property>
+        <property name="ordutegia" type="boolean">
+            <column name="ordutegia" not-null="true" />
+        </property>
+        <property name="ordutegiakontsultatu" type="boolean">
+            <column name="ordutegiakontsultatu" not-null="true" />
+        </property>
+        <property name="ordutegiajarri" type="boolean">
+            <column name="ordutegiajarri" not-null="true" />
+        </property>
+        <set name="erizainas" inverse="true">
+            <key>
+                <column name="perfilzenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Erizaina" />
+        </set>
+        <set name="idazkarias" inverse="true">
+            <key>
+                <column name="perfilzenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Idazkaria" />
+        </set>
+        <set name="sendagileas" inverse="true">
+            <key>
+                <column name="perfilzenbakia" not-null="true" />
+            </key>
+            <one-to-many class="model.Sendagilea" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-ene-2013 2:46:35 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.LanOrduakIdazkaria" table="lan_orduak_idazkaria" catalog="anbulategia">
+        <composite-id name="id" class="model.LanOrduakIdazkariaId">
+            <key-property name="eguna" type="date">
+                <column name="eguna" length="10" />
+            </key-property>
+            <key-property name="hasiera" type="time">
+                <column name="hasiera" length="8" />
+            </key-property>
+            <key-property name="bukaera" type="time">
+                <column name="bukaera" length="8" />
+            </key-property>
+            <key-property name="idazkarizenbakia" type="int">
+                <column name="idazkarizenbakia" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="idazkaria" class="model.Idazkaria" update="false" insert="false" fetch="select">
+            <column name="idazkarizenbakia" not-null="true" />
+        </many-to-one>
+        <property name="gela" type="string">
+            <column name="gela" length="100" not-null="true" />
+        </property>
+        <property name="okupatua" type="boolean">
+            <column name="okupatua" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

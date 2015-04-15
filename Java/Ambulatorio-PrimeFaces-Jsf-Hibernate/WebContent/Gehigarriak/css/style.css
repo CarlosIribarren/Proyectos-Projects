@@ -1,0 +1,75 @@
+#erdian{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.ui-icon.berria{
+    background-image: url(../irudiak/berria.png);
+    margin-right: 4px;
+}
+.ui-icon.bilatu{
+    background-image: url(../irudiak/bilatu.png);
+    margin-right: 4px;
+}
+.ui-icon.etxea{
+    background-image: url(../irudiak/etxea.png);
+    margin-right: 4px;
+}
+.ui-icon.giltza{
+    background-image: url(../irudiak/giltza.png);
+    margin-right: 4px;
+}
+.ui-icon.pertsona{
+    background-image: url(../irudiak/pertsona.png);
+    margin-right: 4px;
+}
+.ui-icon.atera{
+    background-image: url(../irudiak/atera.png);
+    margin-right: 4px;
+}
+.ui-icon.egutegia{
+    background-image: url(../irudiak/egutegia.png);
+    margin-right: 4px;
+}
+.ui-icon.cita{
+    background-image: url(../irudiak/cita.png);
+    margin-right: 4px;
+}
+.ui-icon.probak{
+    background-image: url(../irudiak/probak.png);
+    margin-right: 4px;
+}
+.ui-icon.kontsulta{
+    background-image: url(../irudiak/kontsulta.png);
+    margin-right: 4px;
+}
+.ui-icon.ordujarri{
+    background-image: url(../irudiak/ordujarri.png);
+    margin-right: 4px;
+}
+.ui-icon.ordutegiakontsultatu{
+    background-image: url(../irudiak/ordutegiakontsultatu.png);
+    margin-right: 4px;
+}
+.ui-icon.emancita{
+    background-image: url(../irudiak/emancita.png);
+    margin-right: 4px;
+}
+.ui-icon.idatzi{
+    background-image: url(../irudiak/idatzi.png);
+    margin-right: 4px;
+}
+.ui-icon.atzera{
+    background-image: url(../irudiak/atzera.png);
+    margin-right: 4px;
+}
+.ui-icon.gorde{
+    background-image: url(../irudiak/gorde.png);
+    margin-right: 4px;
+}
+#berria{
+    background-color: red;
+}

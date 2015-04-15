@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Anbulategia</title>
+        <link rel="stylesheet" href="Gehigarriak/css/style.css" />
+        <style type="text/css">
+            html{
+                height: 100%;
+            }
+            body{
+                height: 80%;
+            }
+        </style> 
+    </h:head>
+    <h:body>
+        <h:form id="frmMenu">
+            <p:menubar autoDisplay="false">  
+                <p:menuitem value="Hasiera" url="Orokorra.jsf" icon="etxea" style="margin-left: 10px" /> 
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.gaixoa}" label="Gaixoa" icon="pertsona">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaixoberria}" value="Gaixo Berria" url="GaixoBerria.jsf" icon="berria" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.bilatuhistorial}" value="Bilatu Historial" url="BilatuGaixoHistorial.jsf" icon="bilatu" />  
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.cita}" label="Cita" icon="cita">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkoproba}" value="Gaurko Probak" url="GaurkoProbak.jsf" icon="probak" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.gaurkokontsulta}" value="Gaurko Kontsultak" url="GaurkoKontsulta.jsf" icon="kontsulta" /> 
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.emancita}" value="Eman Cita" url="EmanCita.jsf" icon="emancita" /> 
+                </p:submenu>  
+                <p:submenu rendered ="#{loginBean.erabiltzailea.perfil.ordutegia}" label="Ordutegia" icon="egutegia">  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiajarri}" value="Ordutegia jarri" url="OrdutegiaJarri.jsf" icon="ordujarri" />  
+                    <p:menuitem rendered ="#{loginBean.erabiltzailea.perfil.ordutegiakontsultatu}" value="Ordutegia kontsultatu" url="OrdutegiaKontsultatu.jsf" icon="ordutegiakontsultatu" />  
+                </p:submenu>  
+                <p:menuitem value="Atera" url="index.jsf" icon="atera" /> 
+                <p:menuitem value=" &emsp; - &emsp; #{loginBean.erabiltzailea.perfil.deskribapena}&emsp;:" disabled="true"  />
+                <p:menuitem value="#{loginBean.erabiltzailea.izena}" disabled="true"  />
+            </p:menubar> 
+        </h:form>
+
+        <h:form id="frmGaurkoKontsultak">
+            <p:dataTable id ="datatable" var="cita" value="#{gaurkoKontsultaBean.lortuGarkoCitak(loginBean.zenbakia)}" style=" text-align: center"
+                         paginator="true" rows="15"  
+                 paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 rowsPerPageTemplate="5,10,15"> 
+                
+                <f:facet name="header">  
+                    Gaurko Cita Lista 
+                </f:facet> 
+                
+                    <p:column headerText="Gela" style="width:4%" filterBy="#{proba.gela}">  
+                        <h:outputText value="#{cita.gela}" />  
+                    </p:column>  
+                    <p:column headerText="Hasiera" style="width:7%">  
+                        <h:outputText value="#{cita.hasiera}" />  
+                    </p:column>  
+                    <p:column headerText="Gaixoa" style="width:20%">  
+                        <h:outputText value="#{cita.gaixoa.izena}" />  
+                    </p:column> 
+                    <p:column headerText="Eginda" style="width:10%">  
+                        <p:selectBooleanCheckbox value="#{ gaurkoKontsultaBean.dagoGaurKontsulta(cita.sendagilea.sendagilezenbakia, cita.gaixoa.gaixozenbakia, cita.hasiera) }" disabled="true"/>
+                    </p:column> 
+                    <p:column headerText="Kontsulta" style="width:15%">  
+                        <p:commandButton rendered="#{gaurkoKontsultaBean.aurkakoa}" value="Kontsulta" icon="probak"  
+                                         action="Historial.xhtml" actionListener="#{historialBean.prestatuKontsulta(cita.gaixoa.gaixozenbakia, cita.gela, cita.hasiera, cita.sendagilea.sendagilezenbakia)}"/>       
+                    </p:column>  
+                  <f:facet name="footer">  
+                        Guztira : FALTA DA!!  
+                  </f:facet>  
+            </p:dataTable>   
+            
+        </h:form>
+    </h:body>
+</html>
+
