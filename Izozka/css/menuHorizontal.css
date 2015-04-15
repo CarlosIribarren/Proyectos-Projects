@@ -82,7 +82,15 @@ nav ul li a:hover {
 	
 	nav{
 		/* centrar el menu, dejando padding a la izquierda */
-		padding-left: 0;
+		
+		padding: 0;
+		margin: 0;
+		
+	}
+	
+	nav ul{
+		margin:0 1px 0 1px;
+		list-style-type:none
 	}
 
 	nav ul li{
@@ -90,6 +98,9 @@ nav ul li a:hover {
 		font-size:0.6em;
 		/* letra del menu con menos separacion */
 		margin-right:0;
+		
+		border:solid;
+		margin=0;
 	}
 
 }
