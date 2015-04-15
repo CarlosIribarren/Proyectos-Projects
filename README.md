@@ -6,6 +6,6 @@ Izozka : HTML5 + CSS3 + JS.
 Abestik : Socket programming in C language. 
 
 Java :
-  - Ambulatorio : PrimeFaces + JSF + Hibernate.
+  - Ambulatorio : PrimeFaces + JSF + Hibernate(MySQL).
   - Cajero : JavaSE + JDBC(SQLite).
   - Jokoa : JSP + JDBC(SQLite).
