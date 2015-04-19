@@ -13,7 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/JSP - Jokoa/LIBRERIAS/standard.jar"/>
-	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/JSP - Jokoa/LIBRERIAS/sqlitejdbc-v056.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/JSP-01-Juego/LIBRERIAS/sqlitejdbc-v056.jar"/>
+	<classpathentry kind="lib" path="/home/erabiltzailea/workspace/JSP-01-Juego/LIBRERIAS/standard.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
