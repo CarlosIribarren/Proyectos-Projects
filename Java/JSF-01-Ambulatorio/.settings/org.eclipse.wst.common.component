@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Ambulatorio-PrimeFaces-Jsf-Hibernate">
+    <wb-module deploy-name="JSF-01-Ambulatorio">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Ambulatorio-PrimeFaces-Jsf-Hibernate"/>
-        <property name="java-output-path" value="/Ambulatorio-PrimeFaces-Jsf-Hibernate/build/classes"/>
+        <property name="java-output-path" value="/JSF-01-Ambulatorio/build/classes"/>
+        <property name="context-root" value="JSF-01-Ambulatorio"/>
     </wb-module>
 </project-modules>
