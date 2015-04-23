@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_aena_domain_Empresa" items="${empresas}" z="ohhgwxm6bxRV7xTpx27C0nqmJTo=">
+        <table:table data="${empresas}" id="l_com_aena_domain_Empresa" path="/empresas" typeIdFieldName="idEmpresa" z="lu6FFGeWZIYoy8/JJlQSBIj147Q=">
+            <table:column id="c_com_aena_domain_Empresa_nombre" property="nombre" z="PBSFzxEplKl+vH1XRVrTwJfUPiM="/>
+            <table:column id="c_com_aena_domain_Empresa_cif" property="cif" z="7PjQJ0pkmUFZe/y4uD6qVxC9ZE0="/>
+            <table:column id="c_com_aena_domain_Empresa_provincia" property="provincia" z="SXtw0pjKLr3ytRWky4a92R2AJn8="/>
+            <table:column id="c_com_aena_domain_Empresa_direccion" property="direccion" z="KIXnSGiC0NMx8y946EAAiNlaWEk="/>
+            <table:column id="c_com_aena_domain_Empresa_pais" property="pais" z="lBI8lLu0nLwUcAhDxmu4aXBhrEk="/>
+        </table:table>
+    </page:list>
+</div>

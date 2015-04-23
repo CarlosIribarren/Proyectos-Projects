@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_aena_domain_Puerta" object="${puerta}" path="/puertas" z="BuxBfY9hGHyGmWVEi1HMRRy/4Ek=">
+        <field:display field="idAeropuerto" id="s_com_aena_domain_Puerta_idAeropuerto" object="${puerta}" z="4t6ZnqLsANBS3LBarNn+/EhRGJI="/>
+        <field:display field="area" id="s_com_aena_domain_Puerta_area" object="${puerta}" z="mRCXX4tLT/AmnNifvepbvKEKcac="/>
+        <field:display field="lugar" id="s_com_aena_domain_Puerta_lugar" object="${puerta}" z="8lcqPnFcvROuHkNSaLe6wythxH0="/>
+        <field:display field="estado" id="s_com_aena_domain_Puerta_estado" object="${puerta}" z="qwiAaCUh19FKU8Xrlnbl7npw4Qc="/>
+    </page:show>
+</div>

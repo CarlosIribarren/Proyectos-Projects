@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_aena_domain_Avion" items="${avions}" z="1b8TVQVcQ+Fcwgc1Pe35Jjerwuw=">
+        <table:table data="${avions}" id="l_com_aena_domain_Avion" path="/avions" typeIdFieldName="idAvion" z="NUE10azSy/A9Pyvq+O80rtvtCc0=">
+            <table:column id="c_com_aena_domain_Avion_idEmpresa" property="idEmpresa" z="3IYO8i1wc1RucAzCXxvbXtvZjWQ="/>
+            <table:column id="c_com_aena_domain_Avion_matricula" property="matricula" z="g7auZCDjKiU3v5T1NEgU0VXLVMs="/>
+            <table:column id="c_com_aena_domain_Avion_modelo" property="modelo" z="NsBDHsqGe9Ox9jKLlDzrH2gQYyo="/>
+            <table:column id="c_com_aena_domain_Avion_numeroPlazas" property="numeroPlazas" z="Ap4q4esmUK5pDNrYUtTlk8Quolw="/>
+        </table:table>
+    </page:list>
+</div>

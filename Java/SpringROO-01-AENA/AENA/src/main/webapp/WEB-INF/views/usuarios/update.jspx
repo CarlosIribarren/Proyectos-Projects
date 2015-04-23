@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_aena_domain_Usuario" idField="idUsuario" modelAttribute="usuario" path="/usuarios" versionField="none" z="BAPD9kLjYANf7Y38koLWEzO9aSg=">
+        <field:simple field="pasajeroes" id="c_com_aena_domain_Usuario_pasajeroes" messageCode="entity_reference_not_managed" messageCodeAttribute="Pasajero" z="XC229WZgt/T+eoHO+p8TkMbTAZQ="/>
+        <field:simple field="reservas" id="c_com_aena_domain_Usuario_reservas" messageCode="entity_reference_not_managed" messageCodeAttribute="Reserva" z="3qnt4FC+QrIVHAEUL4TjtQpYaDM="/>
+        <field:input field="dni" id="c_com_aena_domain_Usuario_dni" z="PH7RRC+VtgAWywNvUdXvDhy1hA8="/>
+        <field:input field="nombre" id="c_com_aena_domain_Usuario_nombre" z="pPuJ9giHgpmeHSP9fYQ+rkyNrWY="/>
+        <field:input field="apellido" id="c_com_aena_domain_Usuario_apellido" z="6cVv/4QB08AJLFgkVM+mb/eUaIQ="/>
+        <field:input field="tlf" id="c_com_aena_domain_Usuario_tlf" z="F3I09mnzEC9p8E2dKxlSqG/2U5I="/>
+    </form:update>
+</div>

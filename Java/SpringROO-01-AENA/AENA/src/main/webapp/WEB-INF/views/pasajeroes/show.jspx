@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_aena_domain_Pasajero" object="${pasajero}" path="/pasajeroes" z="rC2iMfpYRI+01JBs5tTy3nfezuQ=">
+        <field:display field="idVuelo" id="s_com_aena_domain_Pasajero_idVuelo" object="${pasajero}" z="vS+D7C5wRKNDimdMkB8AzQYbSPc="/>
+        <field:display field="idUsuario" id="s_com_aena_domain_Pasajero_idUsuario" object="${pasajero}" z="G9TvI0dm4QS+GPd7lkH099CUpqE="/>
+        <field:display date="true" dateTimePattern="${pasajero_horaenbarque_date_format}" field="horaEnbarque" id="s_com_aena_domain_Pasajero_horaEnbarque" object="${pasajero}" z="XeUVjWYUfpUHzutqXUPuFZ1tDBo="/>
+        <field:display field="asiento" id="s_com_aena_domain_Pasajero_asiento" object="${pasajero}" z="y0yxUboJlhr5pgIoU+1OVyJOGWs="/>
+    </page:show>
+</div>

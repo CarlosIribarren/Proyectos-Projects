@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_aena_domain_Empresa" object="${empresa}" path="/empresas" z="q8zsMKgIlWHz9aiJJpgoZPPlmow=">
+        <field:display field="nombre" id="s_com_aena_domain_Empresa_nombre" object="${empresa}" z="LyMqBobfXoqbl+aAKI+96x+jLTs="/>
+        <field:display field="cif" id="s_com_aena_domain_Empresa_cif" object="${empresa}" z="kGW6Adfk1RQJR04HawqpRVIJcNg="/>
+        <field:display field="provincia" id="s_com_aena_domain_Empresa_provincia" object="${empresa}" z="hPZ0F0kwaY3iAzXC5z5jKJ2CM6U="/>
+        <field:display field="direccion" id="s_com_aena_domain_Empresa_direccion" object="${empresa}" z="ytUZ5Azo+a82sz0H5Rng5aao6AE="/>
+        <field:display field="pais" id="s_com_aena_domain_Empresa_pais" object="${empresa}" z="pWckevx+kViT7UJ0b6yOUjzgL5U="/>
+    </page:show>
+</div>

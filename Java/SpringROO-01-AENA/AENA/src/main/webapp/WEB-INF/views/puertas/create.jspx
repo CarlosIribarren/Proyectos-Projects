@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_aena_domain_Puerta" modelAttribute="puerta" path="/puertas" render="${empty dependencies}" z="RwISSrQkchPc/L1itulRs/a96d4=">
+        <field:simple field="vueloes" id="c_com_aena_domain_Puerta_vueloes" messageCode="entity_reference_not_managed" messageCodeAttribute="Vuelo" z="sNgKFqe/nP1IliUIUIS1ZxuZryE="/>
+        <field:simple field="vueloes1" id="c_com_aena_domain_Puerta_vueloes1" messageCode="entity_reference_not_managed" messageCodeAttribute="Vuelo" z="cGj+HkWWlSn3fVhxy0RHOrNceaA="/>
+        <field:select field="idAeropuerto" id="c_com_aena_domain_Puerta_idAeropuerto" itemValue="idAeropuerto" items="${aeropuertoes}" path="/aeropuertoes" z="MLirEVRomladKlfRvEpS/0alw64="/>
+        <field:input field="area" id="c_com_aena_domain_Puerta_area" z="UqQ9KcxwxY0JPB2he0yUod2tCv8="/>
+        <field:input field="lugar" id="c_com_aena_domain_Puerta_lugar" z="a+CCBU8RfVKWbYCgekB+uDwrQso="/>
+        <field:input field="estado" id="c_com_aena_domain_Puerta_estado" z="VpqKFDmgFkEFdfzxOkYuJHOkqlg="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_aena_domain_Puerta" render="${not empty dependencies}" z="IjEJIZtakIowC+TtTAJIt3CNUQQ="/>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_aena_domain_Pasajero" items="${pasajeroes}" z="3oH8dgMfUwoWKjcf0cDivxV25fA=">
+        <table:table data="${pasajeroes}" id="l_com_aena_domain_Pasajero" path="/pasajeroes" typeIdFieldName="idPasajero" z="1xtGBPa43qYadKISAKEU/g4olz4=">
+            <table:column id="c_com_aena_domain_Pasajero_idVuelo" property="idVuelo" z="ntbN3630KGw/8+hAfSXzzUmCTjU="/>
+            <table:column id="c_com_aena_domain_Pasajero_idUsuario" property="idUsuario" z="RmgQu9sALi9chw8cHuoGPXHaZiM="/>
+            <table:column date="true" dateTimePattern="${pasajero_horaenbarque_date_format}" id="c_com_aena_domain_Pasajero_horaEnbarque" property="horaEnbarque" z="Uvukg+GuVeL8FUo080pUxfjdtBI="/>
+            <table:column id="c_com_aena_domain_Pasajero_asiento" property="asiento" z="4cii3IL1sDsOcMU4wwXH7kwPQEU="/>
+        </table:table>
+    </page:list>
+</div>

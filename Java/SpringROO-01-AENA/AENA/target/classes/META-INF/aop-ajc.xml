@@ -1,0 +1,54 @@
+<aspectj>
+<aspects>
+<aspect name="com.aena.domain.Pasajero_Roo_Configurable"/>
+<aspect name="com.aena.domain.Empresa_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.web.AeropuertoController_Roo_Controller"/>
+<aspect name="com.aena.domain.Usuario_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.domain.Empresa_Roo_Jpa_Entity"/>
+<aspect name="com.aena.domain.Aeropuerto_Roo_Configurable"/>
+<aspect name="com.aena.domain.Vuelo_Roo_ToString"/>
+<aspect name="com.aena.domain.Pasajero_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.domain.Aeropuerto_Roo_DbManaged"/>
+<aspect name="com.aena.domain.Usuario_Roo_DbManaged"/>
+<aspect name="com.aena.domain.Puerta_Roo_Jpa_Entity"/>
+<aspect name="com.aena.domain.Aeropuerto_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.domain.Puerta_Roo_DbManaged"/>
+<aspect name="com.aena.domain.Avion_Roo_Jpa_Entity"/>
+<aspect name="com.aena.domain.Vuelo_Roo_Configurable"/>
+<aspect name="com.aena.domain.Usuario_Roo_ToString"/>
+<aspect name="com.aena.domain.Puerta_Roo_ToString"/>
+<aspect name="com.aena.web.EmpresaController_Roo_Controller"/>
+<aspect name="com.aena.domain.Avion_Roo_ToString"/>
+<aspect name="com.aena.domain.Empresa_Roo_DbManaged"/>
+<aspect name="com.aena.domain.Reserva_Roo_ToString"/>
+<aspect name="com.aena.domain.Empresa_Roo_Configurable"/>
+<aspect name="com.aena.domain.Pasajero_Roo_Jpa_Entity"/>
+<aspect name="com.aena.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="com.aena.domain.Avion_Roo_DbManaged"/>
+<aspect name="com.aena.web.AvionController_Roo_Controller"/>
+<aspect name="com.aena.web.UsuarioController_Roo_Controller"/>
+<aspect name="com.aena.domain.Usuario_Roo_Jpa_Entity"/>
+<aspect name="com.aena.domain.Puerta_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.domain.Pasajero_Roo_ToString"/>
+<aspect name="com.aena.domain.Reserva_Roo_Jpa_Entity"/>
+<aspect name="com.aena.web.PuertaController_Roo_Controller"/>
+<aspect name="com.aena.domain.Puerta_Roo_Configurable"/>
+<aspect name="com.aena.web.VueloController_Roo_Controller"/>
+<aspect name="com.aena.domain.Reserva_Roo_DbManaged"/>
+<aspect name="com.aena.domain.Avion_Roo_Configurable"/>
+<aspect name="com.aena.web.PasajeroController_Roo_Controller"/>
+<aspect name="com.aena.domain.Pasajero_Roo_DbManaged"/>
+<aspect name="com.aena.web.ReservaController_Roo_Controller"/>
+<aspect name="com.aena.domain.Aeropuerto_Roo_Jpa_Entity"/>
+<aspect name="com.aena.domain.Avion_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.domain.Vuelo_Roo_DbManaged"/>
+<aspect name="com.aena.domain.Vuelo_Roo_Jpa_Entity"/>
+<aspect name="com.aena.domain.Usuario_Roo_Configurable"/>
+<aspect name="com.aena.domain.Empresa_Roo_ToString"/>
+<aspect name="com.aena.domain.Aeropuerto_Roo_ToString"/>
+<aspect name="com.aena.domain.Vuelo_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.aena.domain.Reserva_Roo_Configurable"/>
+<aspect name="com.aena.domain.Reserva_Roo_Jpa_ActiveRecord"/>
+</aspects>
+</aspectj>
+

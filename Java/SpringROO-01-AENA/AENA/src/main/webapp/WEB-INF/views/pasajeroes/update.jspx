@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_aena_domain_Pasajero" idField="idPasajero" modelAttribute="pasajero" path="/pasajeroes" versionField="none" z="ITwVGGmYYseIG7xKEinCw1DOkwE=">
+        <field:select field="idVuelo" id="c_com_aena_domain_Pasajero_idVuelo" itemValue="idVuelo" items="${vueloes}" path="/vueloes" z="WsmZIrrh0BXvHOLP+/timkjdcQA="/>
+        <field:select field="idUsuario" id="c_com_aena_domain_Pasajero_idUsuario" itemValue="idUsuario" items="${usuarios}" path="/usuarios" z="R7chUD2B2v0u7Wjo/8ZvaBx7mfo="/>
+        <field:datetime dateTimePattern="${pasajero_horaenbarque_date_format}" field="horaEnbarque" id="c_com_aena_domain_Pasajero_horaEnbarque" z="k03SM2NEgt0fsiGKhsxz4wUKTtM="/>
+        <field:input field="asiento" id="c_com_aena_domain_Pasajero_asiento" validationMessageCode="field_invalid_integer" z="Gw1d2W+jyeye8G8oxlcE4uXOAc8="/>
+    </form:update>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_aena_domain_Vuelo" object="${vuelo}" path="/vueloes" z="GhapUBnINqQuDRgTofgl/6t+Pak=">
+        <field:display field="idAvion" id="s_com_aena_domain_Vuelo_idAvion" object="${vuelo}" z="Lxsk4D2K9xhxGrfJpNrC7jMRsYM="/>
+        <field:display field="idPuertaSalida" id="s_com_aena_domain_Vuelo_idPuertaSalida" object="${vuelo}" z="+JyeI3gqPVcXShEwKTdnPDpYgog="/>
+        <field:display field="idPuertaLlegada" id="s_com_aena_domain_Vuelo_idPuertaLlegada" object="${vuelo}" z="+ThyCuTC8nkTX0fHMncYHhINrNU="/>
+        <field:display field="idAeropuertoSalida" id="s_com_aena_domain_Vuelo_idAeropuertoSalida" object="${vuelo}" z="tagfO4S5SLuukBN74ff2Dk+C1Rg="/>
+        <field:display field="idAeropuertoLlegada" id="s_com_aena_domain_Vuelo_idAeropuertoLlegada" object="${vuelo}" z="+bFCiMbiqbgUb/0+qpAKWSRvazU="/>
+        <field:display field="nombre" id="s_com_aena_domain_Vuelo_nombre" object="${vuelo}" z="XQ8Ogh6gnha48hmp5skdYPgTgyw="/>
+        <field:display date="true" dateTimePattern="${vuelo_horasalida_date_format}" field="horaSalida" id="s_com_aena_domain_Vuelo_horaSalida" object="${vuelo}" z="GpAJ55bNkuz4iI8coCFru95LO6M="/>
+        <field:display date="true" dateTimePattern="${vuelo_horallegada_date_format}" field="horaLlegada" id="s_com_aena_domain_Vuelo_horaLlegada" object="${vuelo}" z="c13LG7DrmY3ghkAX8nmQYP8YbT8="/>
+    </page:show>
+</div>

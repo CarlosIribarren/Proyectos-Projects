@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_aena_domain_Reserva" items="${reservas}" z="F2omJoPXJT2iuGuV4LQPWobluXw=">
+        <table:table data="${reservas}" id="l_com_aena_domain_Reserva" path="/reservas" typeIdFieldName="idReserva" z="oZWw4jTp1fnXkari03WPHIdLz1c=">
+            <table:column id="c_com_aena_domain_Reserva_idVuelo" property="idVuelo" z="mUOdi+plXc/OvRaSstnPzczjOE8="/>
+            <table:column id="c_com_aena_domain_Reserva_idUsuario" property="idUsuario" z="xZT9xyrjHCnmYpV8hxp6Es0EXqg="/>
+            <table:column date="true" dateTimePattern="${reserva_diareserva_date_format}" id="c_com_aena_domain_Reserva_diaReserva" property="diaReserva" z="KDRTRDaJHnAwGVl+8MTmgeF7hJs="/>
+            <table:column date="true" dateTimePattern="${reserva_horareserva_date_format}" id="c_com_aena_domain_Reserva_horaReserva" property="horaReserva" z="oC2xSkOMMFEcgfaywyxtf8Y5jeY="/>
+        </table:table>
+    </page:list>
+</div>

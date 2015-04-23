@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_aena_domain_Aeropuerto" idField="idAeropuerto" modelAttribute="aeropuerto" path="/aeropuertoes" versionField="none" z="9nehD2Ghnk7VfMSr7U5+174mPrs=">
+        <field:simple field="puertas" id="c_com_aena_domain_Aeropuerto_puertas" messageCode="entity_reference_not_managed" messageCodeAttribute="Puerta" z="gQOGg9eearjJ7AL22KZCXQAc+EY="/>
+        <field:simple field="vueloes" id="c_com_aena_domain_Aeropuerto_vueloes" messageCode="entity_reference_not_managed" messageCodeAttribute="Vuelo" z="r5aJqr6oVmkLJJbMnpCgd6JfRzs="/>
+        <field:simple field="vueloes1" id="c_com_aena_domain_Aeropuerto_vueloes1" messageCode="entity_reference_not_managed" messageCodeAttribute="Vuelo" z="JprPXmceFG52ueKfFxyMai7pRCs="/>
+        <field:input field="nombre" id="c_com_aena_domain_Aeropuerto_nombre" z="NYsfxV3v72xii8PTd2OuUKAZ9l0="/>
+        <field:input field="provincia" id="c_com_aena_domain_Aeropuerto_provincia" z="Y9AlHjT1c6oX4uGLEa5NTHXjVCg="/>
+        <field:input field="direccion" id="c_com_aena_domain_Aeropuerto_direccion" z="VT8Yje4UI8swMBkKIjBKPevVU5k="/>
+        <field:input field="pais" id="c_com_aena_domain_Aeropuerto_pais" z="7JzZ3J3noHjggMySSkDPA2hKQFY="/>
+    </form:update>
+</div>

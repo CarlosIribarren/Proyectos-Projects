@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_aena_domain_Puerta" items="${puertas}" z="0mqMNhFEh9UrJcL9NuN+Z/18U6U=">
+        <table:table data="${puertas}" id="l_com_aena_domain_Puerta" path="/puertas" typeIdFieldName="idPuerta" z="NMP7dQILWTPZztZQLNUPier47dM=">
+            <table:column id="c_com_aena_domain_Puerta_idAeropuerto" property="idAeropuerto" z="sPbFwzNaPslgX/bjRCw6OWaurKM="/>
+            <table:column id="c_com_aena_domain_Puerta_area" property="area" z="1xQMQ7+J9exrIPoxLIWTbpIdH4w="/>
+            <table:column id="c_com_aena_domain_Puerta_lugar" property="lugar" z="P+lkStNxPa2Ssjj+Wp5WI/GAmX0="/>
+            <table:column id="c_com_aena_domain_Puerta_estado" property="estado" z="hvyN6uE8UrLeQrrVAXWGkq8BSwA="/>
+        </table:table>
+    </page:list>
+</div>

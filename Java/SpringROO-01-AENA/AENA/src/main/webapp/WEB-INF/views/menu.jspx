@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_usuario" z="g6oG0656PcsmmvUYeBtpgiQROck=">
+            <menu:item id="i_usuario_new" messageCode="global_menu_new" url="/usuarios?form" z="RG1gCsiZQjg1HLDzXbHKht6yDkw="/>
+            <menu:item id="i_usuario_list" messageCode="global_menu_list" url="/usuarios?page=1&amp;size=${empty param.size ? 10 : param.size}" z="P7ZIPrcTTBR41JYD0QldbYgsZrM="/>
+        </menu:category>
+        <menu:category id="c_aeropuerto" z="Vzkb51f0d9MRnqSnqfl0+V7qhbY=">
+            <menu:item id="i_aeropuerto_new" messageCode="global_menu_new" url="/aeropuertoes?form" z="4zZNIXP123fF6p2yVh9O09rHfNA="/>
+            <menu:item id="i_aeropuerto_list" messageCode="global_menu_list" url="/aeropuertoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Tjg8TU6MzlaCFkxAoi6rXFR/hMM="/>
+        </menu:category>
+        <menu:category id="c_pasajero" z="1dOzuhzgE+VGNdU8DKENmNFaOHI=">
+            <menu:item id="i_pasajero_new" messageCode="global_menu_new" url="/pasajeroes?form" z="Z04f9c0pIb77HGj6l/KMoEciceg="/>
+            <menu:item id="i_pasajero_list" messageCode="global_menu_list" url="/pasajeroes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="1uBNdkVWpE0XOufzOL0azl5Z3t4="/>
+        </menu:category>
+        <menu:category id="c_avion" z="60dWmw9tXIl+7e3fvhuyftYuL1Q=">
+            <menu:item id="i_avion_new" messageCode="global_menu_new" url="/avions?form" z="rofkGY+BHXbAbq4HTyzSduKQqwQ="/>
+            <menu:item id="i_avion_list" messageCode="global_menu_list" url="/avions?page=1&amp;size=${empty param.size ? 10 : param.size}" z="IpRsqfN8h4FhHDWa3Amba0NkHC4="/>
+        </menu:category>
+        <menu:category id="c_empresa" z="Xy2UIEQBwGL74OghlgyDNqDXG44=">
+            <menu:item id="i_empresa_new" messageCode="global_menu_new" url="/empresas?form" z="TBXez8QM+aB2tzcjHN1lQJYrewc="/>
+            <menu:item id="i_empresa_list" messageCode="global_menu_list" url="/empresas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/YQYlSdehDz3lrOGSSpWZYe++Zk="/>
+        </menu:category>
+        <menu:category id="c_vuelo" z="jfjL2M/qOPvARtvtUnB8K3J7ZLA=">
+            <menu:item id="i_vuelo_new" messageCode="global_menu_new" url="/vueloes?form" z="6vae2/smFnjokDwG7VYPVcTQrQI="/>
+            <menu:item id="i_vuelo_list" messageCode="global_menu_list" url="/vueloes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="wGY39p8UrckwJ30Eix/VK5pVy3g="/>
+        </menu:category>
+        <menu:category id="c_puerta" z="TD83Ed/NUSulxW8d/fg9d6DnJUc=">
+            <menu:item id="i_puerta_new" messageCode="global_menu_new" url="/puertas?form" z="uQ3af7vAngSuoyAxlhJMQRdWq4c="/>
+            <menu:item id="i_puerta_list" messageCode="global_menu_list" url="/puertas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="gBadIyTeDm/7expCGvleyDiFTqQ="/>
+        </menu:category>
+        <menu:category id="c_reserva" z="2dv8KuUKN03nacLGmlbmHwLE18I=">
+            <menu:item id="i_reserva_new" messageCode="global_menu_new" url="/reservas?form" z="/YDemNL7KpX4bazkkJ9CXIcPd2I="/>
+            <menu:item id="i_reserva_list" messageCode="global_menu_list" url="/reservas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="SXqVfp1MeDZeV3cOwFeTM7bxywo="/>
+        </menu:category>
+    </menu:menu>
+</div>

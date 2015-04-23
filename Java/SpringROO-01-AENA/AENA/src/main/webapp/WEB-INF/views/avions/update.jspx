@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_aena_domain_Avion" idField="idAvion" modelAttribute="avion" path="/avions" versionField="none" z="4EXNNoSHvNGWFjnitmE8iyPX4M8=">
+        <field:simple field="vueloes" id="c_com_aena_domain_Avion_vueloes" messageCode="entity_reference_not_managed" messageCodeAttribute="Vuelo" z="6yOLMoO9lJpiTMx+fWXjqJ/33/I="/>
+        <field:select field="idEmpresa" id="c_com_aena_domain_Avion_idEmpresa" itemValue="idEmpresa" items="${empresas}" path="/empresas" z="NMsDgj8KTu0aRc/VIwhvga9XTZc="/>
+        <field:input field="matricula" id="c_com_aena_domain_Avion_matricula" z="2ns4Du7xoL/jF7VR4kggiIBtRZw="/>
+        <field:input field="modelo" id="c_com_aena_domain_Avion_modelo" z="XM2lCXGP3K+GyDr9mYLRYDwKP4U="/>
+        <field:input field="numeroPlazas" id="c_com_aena_domain_Avion_numeroPlazas" validationMessageCode="field_invalid_integer" z="H6MlKva30y0rrCzbUJDjLSw4NLw="/>
+    </form:update>
+</div>

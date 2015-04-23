@@ -1,0 +1,18 @@
+project --topLevelPackage com.aena
+
+jpa setup --provider HIBERNATE --database MYSQL --databaseName AENA --userName root --hostName localhost --password passroot
+
+download accept terms of use
+	
+	//instalar addon MYSQl
+	addon search mysql
+	addon install id --searchResultId 01
+
+database introspect --schema AENA
+
+database reverse engineer --schema databaseSchema --package ~.domain
+
+
+web mvc setup
+
+web mvc all --package ~.web

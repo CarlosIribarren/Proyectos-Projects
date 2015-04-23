@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_aena_domain_Reserva" object="${reserva}" path="/reservas" z="UNVdqpwJoXpK9ofb6i9mhpdQ3wU=">
+        <field:display field="idVuelo" id="s_com_aena_domain_Reserva_idVuelo" object="${reserva}" z="1oHUa0IL2BCxvxYPhihlxq0Uibs="/>
+        <field:display field="idUsuario" id="s_com_aena_domain_Reserva_idUsuario" object="${reserva}" z="PqyaHfZCAWE++otK0YAzKeSTmSc="/>
+        <field:display date="true" dateTimePattern="${reserva_diareserva_date_format}" field="diaReserva" id="s_com_aena_domain_Reserva_diaReserva" object="${reserva}" z="/7nUz+GF7Z4frDYlDvAE5eBf5Uo="/>
+        <field:display date="true" dateTimePattern="${reserva_horareserva_date_format}" field="horaReserva" id="s_com_aena_domain_Reserva_horaReserva" object="${reserva}" z="Rw0lpXo+BMlz7Ov/dUPOAamXe0A="/>
+    </page:show>
+</div>
