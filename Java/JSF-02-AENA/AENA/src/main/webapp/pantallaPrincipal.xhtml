@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>AENA - GESTION DE AEROPUERTO</title>
+</h:head>
+
+<h:body>
+
+	<h:form>
+		<h4>
+			<p:outputLabel>Mejora 1</p:outputLabel>
+			<h:commandLink action="mostrarPuertasDeAeropuerto"><p>Dado un aeropuerto, determinar el número de puertas de embarque disponibles.</p></h:commandLink>
+		</h4>
+		<h4>
+			<p:outputLabel>Mejora 2</p:outputLabel>
+			<h:commandLink action="mostrarAsientosReservados"><p>Dado un avión, determinar el número de asientos reservados. Este número se corresponde con el número de billetes comprados para un avión determinado.</p></h:commandLink>
+		</h4>
+		<h4>		
+			<p:outputLabel>Mejora 3</p:outputLabel>
+			<h:commandLink action="mostrarAsientosOcupados"><p>Dado un avión, determinar el número de asientos ocupados. Este número se corresponde con el número de personas que están dentro de un avión determinado.</p></h:commandLink>
+		</h4>
+		<h4>		
+			<p:outputLabel>Mejora 4</p:outputLabel>
+			<h:commandLink action="mostrarAvionesCaducados"><p>Listar los aviones con licencias de vuelo caducadas.</p></h:commandLink>
+		</h4>
+		<h4>		
+			<p:outputLabel>Mejora 5</p:outputLabel>
+			<h:commandLink action="mostrarAvionesRutaSpain"><p>Listar los aviones que utilicen aeropuertos españoles, ya sea porque están en ellos o porque realizan una ruta donde el origen o el destino es español.</p></h:commandLink>
+		</h4>
+	</h:form>
+
+</h:body>
+</html>

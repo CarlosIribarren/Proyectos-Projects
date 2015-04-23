@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="session">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">passroot</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/AENA</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <property name="show_sql">true</property>
+        <mapping resource="aena/model/Pasajero.hbm.xml" />
+        <mapping resource="aena/model/Empresa.hbm.xml" />
+        <mapping resource="aena/model/Aeropuerto.hbm.xml" />
+        <mapping resource="aena/model/Usuario.hbm.xml" />
+        <mapping resource="aena/model/Reserva.hbm.xml" />
+        <mapping resource="aena/model/Empleado.hbm.xml" />
+        <mapping resource="aena/model/Vuelo.hbm.xml" />
+        <mapping resource="aena/model/Avion.hbm.xml" />
+        <mapping resource="aena/model/Puerta.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>
+
+
+

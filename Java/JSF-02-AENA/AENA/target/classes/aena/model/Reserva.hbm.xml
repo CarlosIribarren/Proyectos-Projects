@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-abr-2015 22:55:28 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="aena.model.Reserva" table="RESERVA" catalog="AENA">
+        <id name="idReserva" type="int">
+            <column name="idReserva" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="vuelo" class="aena.model.Vuelo" fetch="select">
+            <column name="idVuelo" />
+        </many-to-one>
+        <many-to-one name="usuario" class="aena.model.Usuario" fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+        <property name="diaReserva" type="date">
+            <column name="diaReserva" length="10" />
+        </property>
+        <property name="horaReserva" type="time">
+            <column name="horaReserva" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

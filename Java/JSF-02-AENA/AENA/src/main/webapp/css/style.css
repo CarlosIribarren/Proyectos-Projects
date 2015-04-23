@@ -1,0 +1,73 @@
+#cajaLogin{
+	border: solid;
+	width: 30%;
+	margin-left: 35%;
+}
+
+.ui-icon.berria{
+    background-image: url(../img/berria.png);
+    margin-right: 4px;
+}
+.ui-icon.bilatu{
+    background-image: url(../img/bilatu.png);
+    margin-right: 4px;
+}
+.ui-icon.etxea{
+    background-image: url(../img/etxea.png);
+    margin-right: 4px;
+}
+.ui-icon.giltza{
+    background-image: url(../img/giltza.png);
+    margin-right: 4px;
+}
+.ui-icon.pertsona{
+    background-image: url(../img/pertsona.png);
+    margin-right: 4px;
+}
+.ui-icon.atera{
+    background-image: url(../img/atera.png);
+    margin-right: 4px;
+}
+.ui-icon.egutegia{
+    background-image: url(../img/egutegia.png);
+    margin-right: 4px;
+}
+.ui-icon.cita{
+    background-image: url(../img/cita.png);
+    margin-right: 4px;
+}
+.ui-icon.probak{
+    background-image: url(../img/probak.png);
+    margin-right: 4px;
+}
+.ui-icon.kontsulta{
+    background-image: url(../img/kontsulta.png);
+    margin-right: 4px;
+}
+.ui-icon.ordujarri{
+    background-image: url(../img/ordujarri.png);
+    margin-right: 4px;
+}
+.ui-icon.ordutegiakontsultatu{
+    background-image: url(../img/ordutegiakontsultatu.png);
+    margin-right: 4px;
+}
+.ui-icon.emancita{
+    background-image: url(../img/emancita.png);
+    margin-right: 4px;
+}
+.ui-icon.idatzi{
+    background-image: url(../img/idatzi.png);
+    margin-right: 4px;
+}
+.ui-icon.atzera{
+    background-image: url(../img/atzera.png);
+    margin-right: 4px;
+}
+.ui-icon.gorde{
+    background-image: url(../img/gorde.png);
+    margin-right: 4px;
+}
+#berria{
+    background-color: red;
+}

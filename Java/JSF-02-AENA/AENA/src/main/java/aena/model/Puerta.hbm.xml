@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-abr-2015 22:55:28 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="aena.model.Puerta" table="PUERTA" catalog="AENA">
+        <id name="idPuerta" type="int">
+            <column name="idPuerta" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="aeropuerto" class="aena.model.Aeropuerto" fetch="select">
+            <column name="idAeropuerto" />
+        </many-to-one>
+        <property name="area" type="string">
+            <column name="area" length="40" />
+        </property>
+        <property name="lugar" type="string">
+            <column name="lugar" length="40" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="40" />
+        </property>
+        <set name="vuelosForIdPuertaLlegada" table="VUELO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPuertaLlegada" />
+            </key>
+            <one-to-many class="aena.model.Vuelo" />
+        </set>
+        <set name="vuelosForIdPuertaSalida" table="VUELO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idPuertaSalida" />
+            </key>
+            <one-to-many class="aena.model.Vuelo" />
+        </set>
+    </class>
+</hibernate-mapping>

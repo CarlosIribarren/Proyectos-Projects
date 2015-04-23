@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20-abr-2015 23:40:24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="aena.model.Empleado" table="EMPLEADO" catalog="AENA">
+        <id name="idEmpleado" type="int">
+            <column name="idEmpleado" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="aeropuerto" class="aena.model.Aeropuerto" fetch="select">
+            <column name="idAeropuerto" />
+        </many-to-one>
+        <property name="user" type="string">
+            <column name="user" length="40" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="40" />
+        </property>
+        <property name="dni" type="string">
+            <column name="dni" length="40" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="40" />
+        </property>
+        <property name="cargo" type="string">
+            <column name="cargo" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

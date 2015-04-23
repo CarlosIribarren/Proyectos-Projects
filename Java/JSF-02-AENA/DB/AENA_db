@@ -1,0 +1,101 @@
+CREATE TABLE AEROPUERTO
+(
+	idAeropuerto INTEGER NOT NULL PRIMARY KEY,
+	nombre VARCHAR(40),
+	provincia VARCHAR(40),	
+	direccion VARCHAR(40),
+	pais VARCHAR(40)
+); 
+
+CREATE TABLE EMPLEADO
+(
+	idEmpleado INTEGER NOT NULL PRIMARY KEY,
+	user VARCHAR(40),
+	pass VARCHAR(40),
+	dni VARCHAR(40),
+	nombre VARCHAR(40),
+	apellido VARCHAR(40),	
+	cargo VARCHAR(40),
+	idAeropuerto INTEGER,
+	FOREIGN KEY (idAeropuerto)REFERENCES AEROPUERTO(idAeropuerto)
+
+); 
+
+CREATE TABLE EMPRESA
+(
+	idEmpresa INTEGER NOT NULL PRIMARY KEY,
+	nombre VARCHAR(40),
+	cif VARCHAR(40),
+	provincia VARCHAR(40),	
+	direccion VARCHAR(40),
+	pais VARCHAR(40)
+);
+CREATE TABLE AVION
+(
+	idAvion INTEGER NOT NULL PRIMARY KEY,
+	matricula VARCHAR(40),
+	modelo VARCHAR(40),
+	numeroPlazas INTEGER,
+	idEmpresa INTEGER,
+	fechaConcesionLicencia DATE,
+	fechaCaducidadLicencia DATE,
+	FOREIGN KEY (idEmpresa)REFERENCES EMPRESA(idEmpresa)
+); 
+
+CREATE TABLE PUERTA
+(
+	idPuerta INTEGER NOT NULL PRIMARY KEY,
+	area VARCHAR(40),
+	lugar VARCHAR(40),
+	estado VARCHAR(40),
+	idAeropuerto INTEGER,
+	FOREIGN KEY (idAeropuerto)REFERENCES AEROPUERTO(idAeropuerto)
+);
+CREATE TABLE VUELO
+(
+	idVuelo INTEGER NOT NULL PRIMARY KEY,
+	nombre VARCHAR(40),
+	horaSalida TIME,
+	horaLlegada TIME,
+	idAvion INTEGER,	
+	idPuertaSalida INTEGER,
+	idPuertaLlegada INTEGER,
+	idAeropuertoSalida INTEGER,
+	idAeropuertoLlegada INTEGER,
+	FOREIGN KEY (idAvion)REFERENCES AVION(idAvion),
+	FOREIGN KEY (idPuertaSalida)REFERENCES PUERTA(idPuerta),
+	FOREIGN KEY (idPuertaLlegada)REFERENCES PUERTA(idPuerta),
+	FOREIGN KEY (idAeropuertoSalida)REFERENCES AEROPUERTO(idAeropuerto),
+	FOREIGN KEY (idAeropuertoLlegada)REFERENCES AEROPUERTO(idAeropuerto)
+);
+CREATE TABLE USUARIO
+(
+	idUsuario INTEGER NOT NULL PRIMARY KEY,
+	dni VARCHAR(40),
+	nombre VARCHAR(40),
+	apellido VARCHAR(40),
+	tlf VARCHAR(40)
+);
+
+
+CREATE TABLE RESERVA
+(
+	idReserva INTEGER NOT NULL PRIMARY KEY,
+	diaReserva DATE,
+	horaReserva TIME,
+	idVuelo INTEGER,
+	idUsuario INTEGER,
+	FOREIGN KEY (idVuelo)REFERENCES VUELO(idVuelo),
+	FOREIGN KEY (idUsuario)REFERENCES USUARIO(idUsuario)
+);
+CREATE TABLE PASAJERO
+(
+	idPasajero INTEGER NOT NULL PRIMARY KEY,
+	horaEnbarque TIME,
+	asiento INTEGER,
+	idVuelo INTEGER,
+	idUsuario INTEGER,
+	FOREIGN KEY (idVuelo)REFERENCES VUELO(idVuelo),
+	FOREIGN KEY (idUsuario)REFERENCES USUARIO(idUsuario)
+);
+

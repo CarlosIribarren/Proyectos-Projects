@@ -1,0 +1,115 @@
+INSERT INTO AEROPUERTO VALUES
+ (1,"Aeropuerto Donosti","Gipuzkoa","Hondarribia","España"), 
+ (2,"Aeropuerto Zaragoza","Aragon","Zaragoza","España"), 
+ (3,"Aeropuerto Madrid","Madrid","Madrid","España"), 
+ (4,"Aeropuerto Bilbao","Bizkaia","Bilbao","España");
+
+INSERT INTO EMPLEADO VALUES
+ (1,"root","passroot","00000-X","ROOT","TORBAL","Administrador",1), 
+ (2,"a","a","11111-A","Ander","Toribio","Administrador",1),
+ (3,"b","b","22222-S","Felipe","Martin","Administrador",2),
+ (4,"c","c","33333-D","Juan","Martinez","Gerente",2);
+
+
+
+
+INSERT INTO EMPRESA VALUES
+ (1,"Vueling","v1","Madrid","C\Juan salvador","España"), 
+ (2,"Air Europa","ae1","Bruselas","C\bru","Bruselas"), 
+ (3,"Air France","af1","Paris","C\Rue du paris","Francia"), 
+ (4,"Fly Emirates","fe1","Dubai","C\du","Emiratos Arabes");
+
+
+INSERT INTO AVION VALUES
+ (1,"1111-A","Boing 7747",324,1,'2010-04-03','2015-04-03'), 
+ (2,"2222-B","Boing 7737",210,1,'2010-01-01','2020-01-01'), 
+ (3,"3333-C","Boing 7757",550,1,'2013-06-06','2018-06-06'), 
+ (4,"4444-O","Boing 7777",600,2,'2011-04-01','2016-04-01'), 
+ (5,"5555-W","Boing 7777",600,2,'2012-03-11','2017-03-11'), 
+ (6,"6666-S","Boing 7757",550,2,'2011-02-01','2016-02-01'), 
+ (7,"7777-X","Airbus A340",500,3,'2010-04-21','2015-04-21'), 
+ (8,"8888-G","Airbus A340",500,3,'2011-08-22','2016-08-22'), 
+ (9,"9999-H","Airbus A330",400,3,'2010-06-01','2015-06-01'), 
+ (10,"1010-J","Boing 7737",210,4,'2009-04-03','2014-04-03'), 
+ (11,"1111-K","Boing 7757",550,4,'2008-01-11','2013-01-11'), 
+ (12,"1212-Z","Boeing 767",75,4,'2004-09-21','2009-09-21'); 
+
+
+INSERT INTO PUERTA VALUES
+ (1,"Area1","Escalera 1","Disponible",1), 
+ (2,"Area2","Escalera 2","Disponible",1), 
+ (3,"Area3","Escalera 3","Ocupada",1), 
+ (4,"Area4","Escalera 4","Disponible",1),
+ (5,"Ala Este","Escalera 1","Estropeada",2), 
+ (6,"Ala Oeste","Escalera 1","Disponible",2), 
+ (7,"Ala Norte 1","Escalera 1","Disponible",2), 
+ (8,"Ala Norte 2","Escalera 1","Disponible",2), 
+ (9,"Area1","Escalera 1","Disponible",3), 
+ (10,"Area2","Escalera 1","Estropeada",3), 
+ (11,"Area3","Escalera 1","Disponible",3), 
+ (12,"Area1","Escalera iquierda","Disponible",4), 
+ (13,"Area2","Escalera latera derecha","Estropeada",4), 
+ (14,"Area3","Escalera principal","Ocupada",4);
+
+
+INSERT INTO VUELO VALUES
+ (1,"MADRID-BARCELONA",'11:00','12:00',1,2,1,2,3),
+ (2,"VALENCIA-PARIS",'12:00','15:10',5,2,1,3,3), 
+ (3,"MADRID-MALAGA",'13:00','13:30',1,2,5,2,2), 
+ (4,"BARCELONA-VALENCIA",'14:10','14:50',1,2,1,2,3), 
+ (5,"MADRID-DONOSTIA",'11:00','12:00',3,2,1,1,2), 
+ (6,"MADRID-BILBAO",'13:00','14:00',1,2,5,1,3), 
+ (7,"BARCELONA-PARIS",'16:00','18:00',3,2,1,3,1), 
+ (8,"MADRID-BARCELONA",'17:06','18:00',4,2,1,3,2), 
+ (9,"MADRID-VALENCIA",'18:08','19:00',1,5,1,3,1);
+
+
+INSERT INTO USUARIO VALUES
+ (1,"44560574-S","Carlos","Iribarren","943-62-56-10"), 
+ (2,"44560475-S","Juan","Garcia","943-62-23-23"),
+ (3,"44560371-S","Alberto","Saseta","943-34-56-73"),
+ (4,"423460675-S","Mikel","Aramburu","943-34-56-33"),
+ (5,"24560671-S","Pepe","Iribarren","943-62-45-73"),
+ (6,"454360674-S","Antonio","Andres","943-62-56-53"),
+ (7,"246540673-S","Edu","Bartolome","943-62-77-24"),
+ (8,"443760672-S","Ander","Bereziartua","943-66-56-33"),
+ (9,"34534675-S","Gorka","Yarritu","943-62-22-22"),
+ (10,"44560685-S","Raul","Gonzales","943-62-44-23"),
+ (11,"44730695-S","Iker","Zubizarreta","943-55-56-13"),
+ (12,"43560677-S","Alvaro","Uranga","943-62-66-23"),
+ (13,"43510696-S","Jaime","Izquierdo","943-77-56-26"),
+ (14,"41554679-S","Felipe","Martin","943-62-88-23"),
+ (15,"34560660-S","Jesus","Nogueira","943-62-99-23"),
+ (16,"14160655-S","David","Sanchez","943-62-00-23"),
+ (17,"34540684-S","Pedro","Luis","943-62-56-23"),
+ (18,"14160653-S","Maria","Guiterrez","943-62-56-00"),
+ (19,"34540612-S","Naroa","Garcia","943-62-56-99"),
+ (20,"44560671-S","Nerea","Estebanez","943-62-56-88");
+
+
+
+INSERT INTO RESERVA VALUES
+ (1,'2015-04-01','11:54',1,1),
+ (2,'2015-03-11','12:04',1,2),
+ (3,'2015-04-04','12:12',1,3),
+ (4,'2015-03-12','14:34',1,4),
+ (5,'2015-02-03','17:33',1,5),
+ (6,'2015-04-01','14:58',1,6),
+ (7,'2015-04-01','18:45',1,7),
+ (8,'2015-04-11','19:52',2,8),
+ (9,'2015-04-12','11:23',2,9),
+ (10,'2015-04-13','15:02',2,10),
+ (11,'2015-04-13','10:22',2,11);
+
+INSERT INTO PASAJERO VALUES
+ (1,'10:54',23,1,1),
+ (2,'10:04',102,1,2),
+ (4,'10:34',44,1,4),
+ (5,'10:33',45,1,5),
+ (6,'10:58',87,1,6),
+ (7,'10:45',178,1,7),
+ (9,'11:23',3,2,9),
+ (10,'11:02',20,2,10),
+ (11,'11:22',14,2,11);
+
+

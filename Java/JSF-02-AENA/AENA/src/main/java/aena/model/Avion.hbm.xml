@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-abr-2015 0:48:43 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="aena.model.Avion" table="AVION" catalog="AENA">
+        <id name="idAvion" type="int">
+            <column name="idAvion" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="empresa" class="aena.model.Empresa" fetch="select">
+            <column name="idEmpresa" />
+        </many-to-one>
+        <property name="matricula" type="string">
+            <column name="matricula" length="40" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="modelo" length="40" />
+        </property>
+        <property name="numeroPlazas" type="java.lang.Integer">
+            <column name="numeroPlazas" />
+        </property>
+        <property name="fechaConcesionLicencia" type="date">
+            <column name="fechaConcesionLicencia" length="10" />
+        </property>
+        <property name="fechaCaducidadLicencia" type="date">
+            <column name="fechaCaducidadLicencia" length="10" />
+        </property>
+        <set name="vuelos" table="VUELO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idAvion" />
+            </key>
+            <one-to-many class="aena.model.Vuelo" />
+        </set>
+    </class>
+</hibernate-mapping>

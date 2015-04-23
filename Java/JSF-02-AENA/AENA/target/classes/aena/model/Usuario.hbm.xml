@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-abr-2015 22:55:28 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="aena.model.Usuario" table="USUARIO" catalog="AENA">
+        <id name="idUsuario" type="int">
+            <column name="idUsuario" />
+            <generator class="assigned" />
+        </id>
+        <property name="dni" type="string">
+            <column name="dni" length="40" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="40" />
+        </property>
+        <property name="tlf" type="string">
+            <column name="tlf" length="40" />
+        </property>
+        <set name="pasajeros" table="PASAJERO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idUsuario" />
+            </key>
+            <one-to-many class="aena.model.Pasajero" />
+        </set>
+        <set name="reservas" table="RESERVA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idUsuario" />
+            </key>
+            <one-to-many class="aena.model.Reserva" />
+        </set>
+    </class>
+</hibernate-mapping>

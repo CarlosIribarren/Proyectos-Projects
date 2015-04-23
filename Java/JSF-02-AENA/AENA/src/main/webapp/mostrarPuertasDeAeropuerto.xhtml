@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>AENA - GESTION DE AEROPUERTO</title>
+</h:head>
+
+<h:body>
+	<h2>
+		<p:outputLabel>Mejora 1 : </p:outputLabel>
+		<p:outputLabel>Dado un aeropuerto, determinar el número de puertas de embarque disponibles. </p:outputLabel>
+	</h2>
+	
+	<h:form id="datos">
+
+		<p:outputLabel for="aeropuertos" value="Aeropuerto :" />
+		<p:selectOneMenu id="aeropuertos" value="#{puertasDeAeropuertoBean.nombreAeropuerto}"
+		 				 effect="fold" editable="true">
+			<p:ajax listener="#{puertasDeAeropuertoBean.buscarPuertasDeAeropuerto}" update=":datos:valor,:datos:totalPuertas" />
+			<f:selectItem itemLabel="Select One" itemValue="" />
+			<f:selectItems value="#{puertasDeAeropuertoBean.nombreAeropuertos}" />
+
+		</p:selectOneMenu>
+
+		<h2>
+			<h:outputLabel>Total puertas :</h:outputLabel>
+			<h:outputText id="totalPuertas" value="#{puertasDeAeropuertoBean.toalPuertasAeropuerto}"></h:outputText>
+		</h2>
+		<p:dataTable var="puerta" value="#{puertasDeAeropuertoBean.puertasDeAeropuerto}" id="valor">
+			<p:column headerText="Id">
+				<h:outputText value="#{puerta.idPuerta}" />
+			</p:column>
+
+			<p:column headerText="Area">
+				<h:outputText value="#{puerta.area}" />
+			</p:column>
+
+			<p:column headerText="Lugar">
+				<h:outputText value="#{puerta.lugar}" />
+			</p:column>
+
+			<p:column headerText="Estado">
+				<h:outputText value="#{puerta.estado}" />
+			</p:column>
+		</p:dataTable>
+
+	</h:form>
+
+</h:body>
+</html>

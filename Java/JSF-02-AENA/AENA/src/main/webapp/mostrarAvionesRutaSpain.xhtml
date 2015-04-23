@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions">
+
+<h:head>
+	<title>AENA - GESTION DE AEROPUERTO</title>
+</h:head>
+
+<h:body>
+	<h2>
+		<p:outputLabel>Mejora 5 : </p:outputLabel>
+		<p:outputLabel>Listar los aviones que utilicen aeropuertos españoles, ya sea porque están en ellos o porque realizan una ruta donde el origen o el destino es español.</p:outputLabel>
+	</h2>
+	
+	<h:form id="datos">
+
+		<p:dataTable var="avion" value="#{avionesBean.avionesRutaSpain}" id="valor" style=" text-align: center"
+                 	paginator="true" rows="15"  
+                 	paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                 	rowsPerPageTemplate="5,10,15"> 
+                 	
+			<p:column headerText="Id">
+				<h:outputText value="#{avion.idAvion}" />
+			</p:column>
+
+			<p:column headerText="Empresa" filterBy="#{avion.empresa.nombre}" >
+				<h:outputText value="#{avion.empresa.nombre}" />
+			</p:column>
+			
+			<p:column headerText="Matricula" filterBy="#{avion.matricula}" >
+				<h:outputText value="#{avion.matricula}" />
+			</p:column>
+
+			<p:column headerText="Modelo" filterBy="#{avion.modelo}">
+				<h:outputText value="#{avion.modelo}" />
+			</p:column>
+
+			<p:column headerText="Numero Plazas" filterBy="#{avion.numeroPlazas}">
+				<h:outputText value="#{avion.numeroPlazas}" />
+			</p:column>
+			
+			<p:column headerText="Concesion Licencia" filterBy="#{avion.fechaConcesionLicencia}">
+				<h:outputText value="#{avion.fechaConcesionLicencia}" />
+			</p:column>
+
+			<p:column headerText="Caducidad Licencia" filterBy="#{avion.fechaCaducidadLicencia}">
+				<h:outputText value="#{avion.fechaCaducidadLicencia}" />
+			</p:column>			
+		</p:dataTable>
+
+	</h:form>
+
+</h:body>
+</html>

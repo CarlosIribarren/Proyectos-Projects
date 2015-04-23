@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-abr-2015 22:55:28 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="aena.model.Aeropuerto" table="AEROPUERTO" catalog="AENA">
+        <id name="idAeropuerto" type="int">
+            <column name="idAeropuerto" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" />
+        </property>
+        <property name="provincia" type="string">
+            <column name="provincia" length="40" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="40" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" length="40" />
+        </property>
+        <set name="vuelosForIdAeropuertoSalida" table="VUELO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idAeropuertoSalida" />
+            </key>
+            <one-to-many class="aena.model.Vuelo" />
+        </set>
+        <set name="vuelosForIdAeropuertoLlegada" table="VUELO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idAeropuertoLlegada" />
+            </key>
+            <one-to-many class="aena.model.Vuelo" />
+        </set>
+        <set name="puertas" table="PUERTA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idAeropuerto" />
+            </key>
+            <one-to-many class="aena.model.Puerta" />
+        </set>
+    </class>
+</hibernate-mapping>

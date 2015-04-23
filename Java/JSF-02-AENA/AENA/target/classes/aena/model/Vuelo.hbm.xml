@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-abr-2015 22:55:28 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="aena.model.Vuelo" table="VUELO" catalog="AENA">
+        <id name="idVuelo" type="int">
+            <column name="idVuelo" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="aeropuertoByIdAeropuertoLlegada" class="aena.model.Aeropuerto" fetch="select">
+            <column name="idAeropuertoLlegada" />
+        </many-to-one>
+        <many-to-one name="aeropuertoByIdAeropuertoSalida" class="aena.model.Aeropuerto" fetch="select">
+            <column name="idAeropuertoSalida" />
+        </many-to-one>
+        <many-to-one name="puertaByIdPuertaSalida" class="aena.model.Puerta" fetch="select">
+            <column name="idPuertaSalida" />
+        </many-to-one>
+        <many-to-one name="puertaByIdPuertaLlegada" class="aena.model.Puerta" fetch="select">
+            <column name="idPuertaLlegada" />
+        </many-to-one>
+        <many-to-one name="avion" class="aena.model.Avion" fetch="select">
+            <column name="idAvion" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="40" />
+        </property>
+        <property name="horaSalida" type="time">
+            <column name="horaSalida" length="8" />
+        </property>
+        <property name="horaLlegada" type="time">
+            <column name="horaLlegada" length="8" />
+        </property>
+        <set name="pasajeros" table="PASAJERO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idVuelo" />
+            </key>
+            <one-to-many class="aena.model.Pasajero" />
+        </set>
+        <set name="reservas" table="RESERVA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idVuelo" />
+            </key>
+            <one-to-many class="aena.model.Reserva" />
+        </set>
+    </class>
+</hibernate-mapping>
