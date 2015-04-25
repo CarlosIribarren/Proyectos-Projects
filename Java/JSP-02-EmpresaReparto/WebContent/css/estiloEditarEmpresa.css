@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+#parte_DetalleEmpresa{
+	width:700px;
+	height:120px;
+	float: top;
+	margin-left: 10%;
+}
+
+#parte_DetalleCoches{
+	width:40%;
+	float: left;
+}
+
+#parte_DetalleEmpleados{
+	width:40%;
+	float: left;
+}
+
+
+
+body{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+#icono_Eliminar,#icono_Editar,#icono_Configurar,#icono_Volver,#icono_Insertar{
+	border:0;
+	width:20px;
+	height:20px;
+}

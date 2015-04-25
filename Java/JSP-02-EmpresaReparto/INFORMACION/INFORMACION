@@ -1,0 +1,3 @@
+1. Crear una aplicación utilizando JSPs y JavaBean que permita gestionar la empresa de reparto, permitiendo altas, bajas, modificaciones y actualizaciones de los datos, y listar todos los datos.
+2. Además se deben tener en cuenta las restricciones del modelo y las relaciones existentes (un empleado conduce un coche, es jefe, ...)
+3. Ejemplo: Añadir empresas, coches asociados a una empresa, empleados que trabajan en una empresa, ...

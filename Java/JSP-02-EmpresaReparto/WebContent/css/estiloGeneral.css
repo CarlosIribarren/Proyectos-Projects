@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+body{
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#botonCancelarAccion,#botonAccion{
+	float: left;
+	margin-left: 10px;
+}
+
+#icono_Eliminar,#icono_Editar,#icono_Configurar,#icono_Volver,#icono_Insertar{
+	border:0;
+	width:20px;
+	height:20px;
+}
+
