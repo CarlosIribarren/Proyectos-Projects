@@ -24,6 +24,7 @@
 	#cajaMarca{
 		/* Centrado de la marca = Logo + Titulo */
 		text-align:center;
+		background-color:#F2F2F2;
 	}
 	/* MENU VERTICAL */
 	#cajaMenuVertical{
