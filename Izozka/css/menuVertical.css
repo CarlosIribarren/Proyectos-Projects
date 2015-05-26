@@ -102,7 +102,7 @@
 		background-position: -76px 0;
 	}
 
-	/* Main Menu Numbers */
+	/* Main Menu Numbers 
 	.menu > li > a span {
 		font-size: 0.857em;
 		display: inline-block;
@@ -129,6 +129,7 @@
 	.menu > li > a:hover span, .menu > li a.active span {
 		background: #2173a1;
 	}
+	*/
 
 }
 

@@ -6,6 +6,12 @@
 		margin:0;
 		padding:0;
 	}
+	
+	/* color del fondo*/
+	body{
+	background-color:#73C2FB;
+	}
+	
 
 	/* BANER */
 	#cajaBaner{
@@ -16,15 +22,15 @@
 		/* Tamaño letra */
 		font-size:1em;
 		/* linea horizontal */
-		border-bottom: 1px solid #ccc;
+		/* border-bottom: 1px solid #ccc; */
 		/* color de fondo */
-		background-color:#F2F2F2;
+		background-color:#000080;
 	}
 	/* MARCA */
 	#cajaMarca{
 		/* Centrado de la marca = Logo + Titulo */
 		text-align:center;
-		background-color:#F2F2F2;
+		background-color:#000080;
 	}
 	/* MENU VERTICAL */
 	#cajaMenuVertical{
@@ -41,6 +47,8 @@
 		float:left;
 		/* ancho compartido con el Menu Vertical ( 20 + 80 ) */
 		width:80%;
+		
+		
 		
 	}
 	.separador{
@@ -59,7 +67,7 @@
 		/* linea horizontal */
 		border-top: 1px solid #ccc;
 		/* color de fondo */
-		background-color:#F2F2F2;
+	
 	}
 }
 	

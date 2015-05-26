@@ -2,7 +2,7 @@
 /* Reglas aplicadas a cualquier ancho de ventana de navegador que INFERIOR el valor definido en la consulta.*/
 @media screen and (max-width: 2500px) {
 nav{
-	background-color:#0080FF;
+	background-color:#000080;
 	overflow:hidden;
 	padding:5px;
 	width:100%-5px;
@@ -13,18 +13,6 @@ nav ul{
 	padding:0;
 	margin-left:200px;
 }
-/* Cuando estamos en la pestaña elegida, esta se seleciona
-con un color para resaltarla*/
-a.current  {
-    background-color: #0040FF;
-    color: #FFFFFF;
-		/*Bordes redondeados*/
-	-webkit-border-radius:5px;/*Chrome y Safari*/
-	-moz-border-radius:5px;/*Firefox*/
-	-o-border-radius:5px;/*Opera*/
-	border-radius:5px;/*Estandar por defecto*/
-}
-
 nav ul li{
 	/*Bordes redondeados*/
 	-webkit-border-radius:5px;/*Chrome y Safari*/
@@ -39,28 +27,39 @@ nav ul li{
 	text-align:center;
 	
 }
-nav ul li:hover{
-	/*Degradado de fondo*/
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#0040FF), to( #0040FF));/*Chrome y Safari*/
-	background-image: -moz-linear-gradient(top center, #0040FF, #0040FF);/*Firefox*/
-	background-image: -o-linear-gradient(top, #0040FF, #0040FF);/*Opera*/
-	background-image: linear-gradient(top, #0040FF, #0040FF);/*Estandar por defecto*/
-
-}
 nav ul li a{
 	color:#FFFFFF;
 	display:block;
 	padding:10px;
 	text-decoration:none;
+}
+/* Cuando estamos en la pestaña elegida, esta se seleciona con un color para resaltarla*/
+a.current  {
+    background-color: #FFFFFF;
+    color: #0000FF;
+		/*Bordes redondeados*/
+	-webkit-border-radius:5px;/*Chrome y Safari*/
+	-moz-border-radius:5px;/*Firefox*/
+	-o-border-radius:5px;/*Opera*/
+	border-radius:5px;/*Estandar por defecto*/
+}
+	
+/* Cuando pasamos el raton por encima */	
+nav ul li:hover{
+	/*Degradado de fondo*/
+	background-color:#FFFFFF;
+	
+	/*background-image: -webkit-gradient(linear, left top, left bottom, from(#0000FF), to( #FFFFFF));/*Chrome y Safari*/
+	/*background-image: -moz-linear-gradient(top center, #0000FF, #FFFFFF);/*Firefox*/
+	/*background-image: -o-linear-gradient(top, #0000FF, #FFFFFF);/*Opera*/
+	/*background-image: linear-gradient(top, #0000FF, #FFFFFF);/*Estandar por defecto*/
 
 }
+/* Cuando pasamos el raton por encima */	
 nav ul li a:hover {
-	color: #FFFFFF;
+	color: #0000FF;
 }
 
-
-
-}
 
 /* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
 @media screen and (max-width: 1200px) {
