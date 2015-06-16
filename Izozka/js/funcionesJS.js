@@ -50,7 +50,7 @@ function cargarCategorioasDesdePrincipal(urlCategoria)
 				document.getElementById("cajaMenuVertical").innerHTML=xmlhttp.responseText;
 			}
 	  }
-		xmlhttp.open("GET",'menuIzquierda.html',true);
+		xmlhttp.open("GET",'content/menuIzquierda.html',true);
 		xmlhttp.send();
 	
 	//CARGAR TROZO DE CATEGORIAS

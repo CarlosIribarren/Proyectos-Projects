@@ -1,14 +1,121 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-      <meta http-equiv="refresh"content="0; url=content/index.html">
-   </head>
-   <body>
-      <p>This page has moved to
-         <a href="content/index.html">Inicio</a>.
-         If you are not redirected to the new location within a few
-         seconds, please click on the URL shown in the link above.
-      </p>
-   </body>
+<html>
+<head>
+	<title>Izozka Congelados</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/estiloGlobal.css" />
+	<link rel="stylesheet" href="css/estiloSlider.css" />
+	<link rel="stylesheet" href="css/estiloPaginaPrincipal.css" />
+	<link rel="stylesheet" href="css/menuVertical.css" />
+	
+	<link rel="stylesheet" href="css/EstiloPestañas.css" />
+	<link rel="stylesheet" href="css/menuHorizontal.css" />
+
+	
+</head>
+<body>
+	
+	<div id="cajaMarca">
+		<a  href="index.html" ><img id="img_Logo" src="images/Logo.png" alt="Izozka"></a>	
+		<img id="img_Titulo" src="images/Frase.png"  alt="Productos de gran calidad a un precio muy competitivo.">	
+	</div>
+	<div id="cajaMenuHorizontal">
+		<nav>
+			<ul>		
+				<li><a href="content/acercaDeIzozka.html" title="ACERCA DE IZOZKA">IZOZKA</a></li>
+				<li><a href="content/calidad.html" title="NUESTRA CALIDAD">CALIDAD</a></li>
+				<li><a href="content/productos.html" title="PRODUCTOS">PRODUCTOS</a></li>
+				<li><a href="content/servicioAlCliente.html" title="SERVICIO DE ENTREGA">SERVICIO</a></li>
+				<li><a href="content/pedido.html" title="INICIO">PEDIDO</a></li>
+				<li><a href="content/contacto.html" title="CONTACTO">CONTACTO</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<!-- MENU VERTICAL-->
+	<div id="cajaMenuVertical">
+	
+	</div>
+	
+	<div id="cajaPrincipal">
+		<section id="principal">
+
+			<div id="container">
+			</div>
+			
+			<!-- ----------------- SLIDER ------------------------------ -->
+
+			<div id="captioned-gallery">
+				<figure class="slider">
+					<figure>
+						<a href="#" onclick="javascript:cargarCategorioasDesdePrincipal('content/Precocinados/precocinados_Desde_Principal.html')" >
+							<img  src="images/slider/croqueta-de-hongos.jpg" alt="precocinados">
+							<figcaption>Precocinados</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#" onclick="javascript:cargarCategorioasDesdePrincipal('content/Mariscos/mariscos_Desde_Principal.html')" >
+							<img src="images/slider/marisco.jpg" alt="mariscos">
+							<figcaption>Mariscos</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#" onclick="javascript:cargarCategorioasDesdePrincipal('content/Carnes/carnes_Desde_Principal.html')" >
+							<img src="images/slider/carnes.jpeg" alt="carnes">
+							<figcaption>Carnes</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#" onclick="javascript:cargarCategorioasDesdePrincipal('content/Verduras/verduras_Desde_Principal.html')" >
+							<img src="images/slider/verduras.jpg" alt="verduras">
+							<figcaption>Verduras</figcaption>
+						</a>
+					</figure>
+					<figure>
+						<a href="#" onclick="javascript:cargarCategorioasDesdePrincipal('content/PastasyPizzas/pastasypizzas_Desde_Principal.html')" >
+							<img src="images/slider/pastasypizzas.jpg" alt="pastasypizzas">
+							<figcaption>Pastas y Pizzas</figcaption>
+						</a>
+					</figure>
+				</figure>
+			</div>
+
+			<div id="textoPantallaPrincipal">
+
+				<fieldset>
+				<legend> IZOZKA Congelados S.L </legend>
+					<p>
+						Teléfono de Contacto:  619 706 188 // 630 539 820 
+					</p>
+
+					<p>
+						<div id="tlf">
+						<strong>Teléfono Pedidos </br> <img id="img_phone" src="images/phone.png" alt="Telefono Izozka"> +34 943 331 653</strong>
+						</div>
+					</p>
+					<p>
+						<img id="img_email" src="images/email.png" alt="Email Izozka"><strong>izozka@izozka.com</strong>
+					</p>
+				</fieldset>
+				
+				<a id="verLosProductos" href="content/productos.html" >
+						Ver Catalogo <img id="icono-Catalogo" src="images/catalogo.png" alt="catalogo"> 
+				</a>
+				
+
+			</div>
+			
+		</section>
+	</div>
+	<div id="cajaPie">
+		<footer>
+
+				Izozka Congelados S.L. 2015 www.izozka.com	
+		</footer>
+	</div>
+	
+	<!-- Scripts -->
+	<script language="JavaScript" SRC="js/funcionesJS.js"></script>
+	
+</body>
 </html>

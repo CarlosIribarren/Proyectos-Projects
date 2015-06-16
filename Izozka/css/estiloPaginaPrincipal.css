@@ -28,17 +28,29 @@
 		width:50%;
 		/* margen con el slider */
 		margin-left:5px;
+		
+				
 
 	}
 	
 	/* texto de la pantalla principal */
 	#textoPantallaPrincipal p{
 		/* separa el enlace */
-		margin-bottom:2em;
+		margin-bottom:1em;
 		/* separar el parrafo */
-		margin-top:2em;
+		margin-top:1em;
 	}
 
+	/* Redondear bordes slider */
+	#captioned-gallery{
+			/* redondear bordes */	
+		-khtml-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		border: 1px solid #cccccc;	
+	}
+	
 
 	/* Enlace Ver Productos */
 	#textoPantallaPrincipal a{
@@ -65,7 +77,6 @@
 		/* centrar en enlace */
 		margin-left:40%;
 		margin-right:auto;
-
 		
 	}
 	
@@ -75,7 +86,33 @@
 		margin-bottom:-0.5em;
 	}
 
-}
+
+	/* Informacion empresa  */
+	fieldset {
+	  padding: 0 20px 20px;
+	  margin: 0 0 30px ;
+	  border: 2px solid #ffffff;
+	  border-radius: 10px;
+	}
+	
+	legend {
+	  font-size: 0.9em;
+	  font-weight: bold;
+	  text-align: left;
+	  padding: 5px;
+	  margin: 0;
+	  width: 10em;
+	  border: 2px solid #ffffff;
+	  border-radius: 5px;
+	  width:50%;
+	}
+	
+	#img_email{
+		margin-right:2%;	
+	}
+	#tlf{
+		color:red;
+	}
 
 
 /* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
@@ -100,6 +137,14 @@
 		font-size: 0.9em;
 	}
 	
+	/* telefono */
+	#tlf{
+		font-size: 0.9em;
+	}
+	
+	legend{
+	font-size: 0.8em;	
+	}
 }
 
 
@@ -124,5 +169,11 @@
 		margin-right:auto;
 	}
 	
-	
+	/* telefono */
+	#tlf{
+		font-size: 0.7em;
+	}
+	legend{
+	font-size: 0.7em;	
+	}
 }

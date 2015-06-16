@@ -130,7 +130,21 @@
 		background: #2173a1;
 	}
 	*/
-
+	
+	/* DESCARGA DE PDF DE PRODUCTOS */
+	#descargaPDF{
+		margin:8%;
+	}
+	#descargaPDF div{
+		color:red;
+		float:left;
+	}
+	
+	div#tituloPDF{
+		margin-top:3%;
+		
+	}
+	
 }
 
 /* Reglas aplicadas a cualquier ancho de ventana de navegador que sea INFERIOR al valor definido en la consulta..*/
